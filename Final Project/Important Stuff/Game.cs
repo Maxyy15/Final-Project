@@ -8,13 +8,13 @@ namespace Final_Project
 {
     internal class Game
     {
-        List<Areas> areas = new List<Areas>();
-        Areas currentArea;
+        List<Area> areas = new List<Area>();
+        Area currentArea;
         internal bool IsGameOver() => isFinished;
         static bool isFinished;
         static string nextArea = "";
 
-        internal void Add(Areas area)
+        internal void Add(Area area)
         {
             areas.Add(area);
             if (currentArea == null)
@@ -31,7 +31,7 @@ namespace Final_Project
             CheckTransition();
         }
 
-        internal static void Transition<T>() where T : Areas
+        internal static void Transition<T>() where T : Area
         {
             nextArea = typeof(T).Name;
         }

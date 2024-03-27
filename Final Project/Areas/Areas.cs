@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace Final_Project
 {
-    internal abstract class Areas
+    internal abstract class Area
     {
         internal abstract string CreateDescription();
         internal abstract void ReceiveChoice(string choice);
-       
     }
 }

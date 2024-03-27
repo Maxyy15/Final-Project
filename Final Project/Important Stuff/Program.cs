@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Final_Project.Areas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,9 +12,8 @@ namespace Final_Project
         static void Main(string[] args)
         {
             var game = new Game();
-            game.Add(new Bedroom());
-            game.Add(new Bathroom());
-            game.Add(new AtticRoom());
+            game.Add(new Home());
+            game.Add(new Forest());
             
             while (!game.IsGameOver())
             {
