@@ -8,5 +8,13 @@ namespace Final_Project.Monsters
 {
     internal class Skeleton : Monster
     {
+        public Skeleton(string name, int hp, int damage, int exp, int drop)
+        {
+            this.monsterName = name;
+            this.monsterHP = hp;
+            this.monsterDamage = damage;
+            this.monsterExp = exp;
+            this.monsterDrop = drop;
+        }
     }
 }

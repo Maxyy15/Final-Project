@@ -9,10 +9,22 @@ namespace Final_Project.Monsters
     internal class Monster
     {
         public string monsterName;
-        public int currentMonsterHealth;
+
+        public int monsterHP;
         public int maxMonsterHP;
+        public int healAmount;
+        public bool doesHeal;
+
         public int monsterDamage;
-        public int monsterGold;
+
         public int monsterExp;
+        public int monsterDrop;
+        public string monsterDropName;
+        public int monsterGold;
+
+        public bool playerStatusEffect;
+
+        public bool doesStatusEffect;
+        public string statusEffectName;
     }
 }

@@ -6,18 +6,16 @@ using System.Threading.Tasks;
 
 namespace Final_Project.Monsters
 {
-    internal class Slime : Monster
+    internal class Mimic : Monster
     {
-        public int maxMonsterHP;
-        public int healAmount;
-        public Slime(string name, int hp, int damage, int exp, int drop)
+        public int monsterGold;
+        public Mimic(string name, int hp, int damage, int exp, int gold)
         {
             this.monsterName = name;
             this.monsterHP = hp;
             this.monsterDamage = damage;
             this.monsterExp = exp;
-            this.monsterDrop = drop;
+            this.monsterGold = gold;
         }
-        
     }
 }

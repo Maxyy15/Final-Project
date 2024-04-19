@@ -21,7 +21,7 @@ You can go 'Home' to rest up and apply your skill points!
             {
                 case "explore":
                     Console.WriteLine("You return to your bedroom.");
-                    Game.Transition<Menu>();
+                    Game.Transition<AreaList>();
                     break;
                 case "home":
                     Console.WriteLine("The chest opens and you get a key.");

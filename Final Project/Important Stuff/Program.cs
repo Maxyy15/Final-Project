@@ -11,8 +11,9 @@ namespace Final_Project
     internal class Program
     {
         public static Player adventurer = new Player();
-        public static int maxHP = 100, maxMana = 50;
+        public static int levelUpCost = 30, maxHP = 100, maxMana = 50, playerStatusCount, monstersStatusCount;
         public static string currentArea;
+        public static bool cast = false;
 
         static void Main(string[] args)
         {

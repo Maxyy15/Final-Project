@@ -16,6 +16,8 @@ namespace Final_Project
         public int LevelUpCost = 30;
         public int Level = 1;
 
+        public bool Big = false;
+
         public string currentWeaponName;
         public int currentWeaponDamage = 0;
 

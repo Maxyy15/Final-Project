@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Final_Project.Monsters
 {
-    internal class Slime : Monster
+    internal class Spider : Monster
     {
-        public int maxMonsterHP;
-        public int healAmount;
-        public Slime(string name, int hp, int damage, int exp, int drop)
+        public bool doesStatusEffect;
+        public string statusEffectName;
+        public Spider(string name, int hp, int damage, int exp, int drop)
         {
             this.monsterName = name;
             this.monsterHP = hp;
@@ -18,6 +18,5 @@ namespace Final_Project.Monsters
             this.monsterExp = exp;
             this.monsterDrop = drop;
         }
-        
     }
 }

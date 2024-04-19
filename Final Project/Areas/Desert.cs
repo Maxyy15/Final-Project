@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Final_Project.Important_Stuff;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,10 +21,11 @@ In the forest, Goblins, Slimes and Wolves are abundent!
             {
                 case "look":
                     Console.WriteLine("You decided to look around!");
-                    Game.Transition<Home>();
+                    Fighting.Fight();
                     break;
                 case "escape":
                     Console.WriteLine("The chest opens and you get a key.");
+                    Game.Transition<Menu>();
                     break;
                 default:
                     Console.WriteLine("Invalid command.");

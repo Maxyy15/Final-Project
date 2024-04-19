@@ -1,8 +1,10 @@
 ﻿using Final_Project.Areas;
+using Final_Project.Monsters;
 using Final_Project.Player_Stuff;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,12 +12,14 @@ namespace Final_Project.Important_Stuff
 {
     internal class Fighting
     {
-        static void Fight()
+        public static Monster monster = new Monster();
+
+        public static void Fight()
         {
             string[] weaknessArr = new string[10];
             string[] resistanceArr = new string[10];
             string option;
-            Random rnd1 = new Random();
+            Random rnd = new Random();
         start1:
             
             try
@@ -31,7 +35,7 @@ namespace Final_Project.Important_Stuff
                     {
                         if (Program.currentArea == "forest")
                         {
-                            Console.WriteLine("You decided to go into the forest!\nIn the forest, Goblins, Slimes and Wolves are abundent!\n\n");
+                            Console.WriteLine("You are now deep within the forest!\n\n");
                             Console.WriteLine("Do you 'Look' around for a fight or do you 'Escape'?");
                         }
                         else if (Program.currentArea == "cave")
@@ -46,122 +50,115 @@ namespace Final_Project.Important_Stuff
                             break;
                         }
 
-                        option = Console.ReadLine();
+                        option = Console.ReadLine().ToLower();
 
-                        if (option == "Look")
+                        if (option == "look")
                         {
                             Console.Clear();
                             Console.WriteLine("You decide to look around!");
                         look:
-                            if (Program.currentArea == "Forest")
+                            if (Program.currentArea == "forest")
                             {
-                                int rn = rnd1.Next(0, 17);
+                                int rn = rnd.Next(0, 17);
 
                                 if (rn >= 0 && rn <= 4)
                                 {
-                                    cm.monsterName = "Goblin";
-                                    cm.monsterHealth = 20;
-                                    cm.monsterDamage = 5;
-                                    cm.monsterResistanceDamage = 2;
-                                    cm.monsterGold = rnd.Next(4, 13);
-                                    cm.monsterExp = rnd.Next(4, 10);
-                                    cm.doesMonsterStatusEffect = false;
-                                    cm.monsterHeal = false;
+                                    Goblin goblin = new Goblin("Goblin", 20, 5, rnd.Next(4, 10), rnd.Next(2,6));
+
+                                    goblin.monsterDropName = "Goblin Teeth";
+                                    Inventory.monsterDropNames.Insert(0, "Goblin Teeth");
+
                                     resistanceArr[0] = "Water";
                                     weaknessArr[0] = "Fire";
 
+                                    monster = goblin;
                                 }
                                 else if (rn > 4 && rn <= 9)
                                 {
-                                    cm.monsterName = "Wolf";
-                                    cm.monsterHealth = 15;
-                                    cm.monsterDamage = 10;
-                                    cm.monsterResistanceDamage = 3;
-                                    cm.monsterGold = rnd.Next(4, 13);
-                                    cm.monsterExp = rnd.Next(4, 10);
-                                    cm.doesMonsterStatusEffect = false;
-                                    cm.monsterHeal = false;
-                                    resistanceArr[0] = "Air";
-                                    weaknessArr[0] = "Water";
+                                    Wolf wolf = new Wolf("Wolf", 15, 10, rnd.Next(4, 10), rnd.Next(0,1));
 
+                                    wolf.monsterDropName = "Wolf Pelt";
+                                    Inventory.monsterDropNames.Insert(1, "Wolf Pelt");
+
+                                    resistanceArr[0] = "Air";
+                                    resistanceArr[1] = "";
+                                    weaknessArr[0] = "Fire";
+
+                                    monster = wolf;
                                 }
                                 else if (rn > 9 && rn <= 14)
                                 {
-                                    cm.monsterName = "Slime";
-                                    cm.monsterHealth = 10;
-                                    cm.monsterDamage = 15;
-                                    cm.monsterResistanceDamage = 2;
-                                    cm.monsterGold = rnd.Next(4, 13);
-                                    cm.monsterExp = rnd.Next(4, 10);
-                                    cm.doesMonsterStatusEffect = false;
-                                    cm.monsterHeal = false;
+                                    Slime slime = new Slime("Slime", 10, 15, rnd.Next(4, 10), rnd.Next(2,5));
+
+                                    slime.monsterDropName = "Drops of Slime";
+                                    Inventory.monsterDropNames.Insert(2, "Drops of Slime");
+
+                                    slime.maxMonsterHP = slime.monsterHP;
+                                    slime.healAmount = 3;
+
                                     resistanceArr[0] = "Fire";
                                     weaknessArr[0] = "Air";
+
+                                    monster = slime;
                                 }
                             }
 
-                            else if (Program.currentArea == "Caves")
+                            else if (Program.currentArea == "cave")
                             {
 
-                                int rn = rnd1.Next(0, 16);
+                                int rn = rnd.Next(0, 16);
                                 rn = 13;
                                 if (rn >= 0 && rn <= 3)
                                 {
-                                    cm.monsterName = "Mimic";
-                                    cm.monsterHealth = 40;
-                                    cm.monsterDamage = 18;
-                                    cm.monsterResistanceDamage = 5;
-                                    cm.monsterGold = rnd.Next(20, 80);
-                                    cm.monsterExp = rnd.Next(15, 40);
-                                    cm.doesMonsterStatusEffect = false;
-                                    cm.monsterHeal = false;
+                                    Mimic mimic = new Mimic("Mimic", 40, 18, rnd.Next(15, 40), rnd.Next(20, 80));
+                                    
                                     resistanceArr[0] = "Water";
-                                    weaknessArr[0] = "Fire";
+                                    weaknessArr[0] = "Lightning";
 
+                                    monster = mimic;
                                 }
                                 else if (rn > 3 && rn <= 7)
                                 {
-                                    cm.monsterName = "Skeleton";
-                                    cm.monsterHealth = 50;
-                                    cm.monsterDamage = 14;
-                                    cm.monsterResistanceDamage = 6;
-                                    cm.monsterGold = rnd.Next(15, 40);
-                                    cm.monsterExp = rnd.Next(30, 60);
-                                    cm.doesMonsterStatusEffect = false;
-                                    cm.monsterHeal = false;
+                                    Skeleton skeleton = new Skeleton("Skeleton", 50, 14, rnd.Next(30, 60), rnd.Next(2, 6));
+
+                                    skeleton.monsterDropName = "Bones";
+                                    Inventory.monsterDropNames.Insert(3, "Bones");
+
                                     resistanceArr[0] = "Dark";
                                     weaknessArr[0] = "Holy";
 
+                                    monster = skeleton;
                                 }
                                 else if (rn > 7 && rn <= 12)
                                 {
-                                    cm.monsterName = "Spider";
-                                    cm.monsterHealth = 30;
-                                    cm.monsterDamage = 6;
-                                    cm.monsterResistanceDamage = 5;
-                                    cm.monsterGold = rnd.Next(8, 18);
-                                    cm.monsterExp = rnd.Next(10, 40);
-                                    cm.monsterHeal = false;
-                                    cm.doesMonsterStatusEffect = true;
-                                    cm.monsterStatusEffect = "Poison";
+                                    Spider spider = new Spider("Spider", 30, 6, rnd.Next(10, 40), rnd.Next(1, 3));
+
+                                    spider.monsterDropName = "Spider Poison";
+                                    Inventory.monsterDropNames.Insert(4, "Spider Poison");
+
+                                    spider.doesStatusEffect = true;
+                                    spider.statusEffectName = "Poison";
+
                                     resistanceArr[0] = "Poison";
                                     weaknessArr[0] = "Holy";
+
+                                    monster = spider;
                                 }
                                 else if (rn > 12 && rn <= 14)
                                 {
-                                    cm.monsterName = "Troll";
-                                    cm.monsterHealth = 70;
-                                    cm.monsterDamage = 20;
-                                    cm.monsterResistanceDamage = 10;
-                                    cm.monsterGold = rnd.Next(40, 80);
-                                    cm.monsterExp = rnd.Next(70, 100);
-                                    cm.monsterHeal = true;
-                                    cm.doesMonsterStatusEffect = false;
-                                    cm.monsterHealAmount = 5;
+                                    Troll troll = new Troll("Troll", 70, 20, rnd.Next(70, 100), rnd.Next(0, 1));
+
+                                    troll.monsterDropName = "Bottle of Troll Blood";
+                                    Inventory.monsterDropNames.Insert(5, "Bottles of Troll Blood");
+
+                                    troll.healAmount = 5;
+                                    troll.maxMonsterHP = troll.monsterHP;
+
                                     resistanceArr[0] = "";
                                     weaknessArr[0] = "Fire";
                                     weaknessArr[1] = "";
-                                    cm.maxMonsterHP = cm.monsterHealth;
+
+                                    monster = troll;
                                 }
                             }
 
@@ -172,65 +169,65 @@ namespace Final_Project.Important_Stuff
                                 goto start1;
                             }
 
-                            Console.WriteLine($"You encountered a {cm.monsterName}!\n");
+                            Console.WriteLine($"You encountered a {monster.monsterName}!\n");
                         choice1:
                             Console.WriteLine($"Your current HP is {Program.adventurer.HP}" +
                                 $"\nYour current Mana is {Program.adventurer.Mana}" +
                                 $"\nYour current Damage is {Program.adventurer.currentWeaponDamage}" +
                                 $"\nYour current Defense is {Program.adventurer.currentArmorProtection}\n");
 
-                            Console.WriteLine($"The {cm.monsterName}'s HP is {cm.monsterHealth}" +
-                                $"\nThe {cm.monsterName}'s Damage is {cm.monsterDamage}" +
-                                $"\nThe {cm.monsterName}'s Defense is {cm.monsterResistanceDamage}\n");
+                            Console.WriteLine($"The {monster.monsterName}'s HP is {monster.monsterHP}" +
+                                $"\nThe {monster.monsterName}'s Damage is {monster.monsterDamage}");
+                                //$"\nThe {monster.monsterName}'s Defense is {monster.monsterResistanceDamage}\n");
 
                             Console.WriteLine("Do you 'Attack', 'Heal' or do you 'Escape'?");
-                            option = Console.ReadLine();
+                            option = Console.ReadLine().ToLower();
 
-                            if (option == "Attack")
+                            if (option == "attack")
                             {
                                 Console.Clear();
                             tryagain:
                                 Console.WriteLine("Do you attack with your 'Weapon' or your 'Magic'?");
 
-                                option = Console.ReadLine();
-                                if (option == "Weapon")
+                                option = Console.ReadLine().ToLower();
+                                if (option == "weapon")
                                 {
                                     if (resistanceArr.Any(resist => Program.adventurer.currentWeaponName == resist))
                                     {
-                                        int damageReduction = (Program.adventurer.currentWeaponDamage / 2) - cm.monsterResistanceDamage;
+                                        int damageReduction = (Program.adventurer.currentWeaponDamage / 2);
 
-                                        cm.monsterHealth -= damageReduction;
+                                        monster.monsterHP -= damageReduction;
 
-                                        Console.WriteLine($"You attacked the {cm.monsterName} for {damageReduction}!\n");
+                                        Console.WriteLine($"You attacked the {monster.monsterName} for {damageReduction}!\n");
                                     }
                                     else if (weaknessArr.Any(weakness => Program.adventurer.currentWeaponName == weakness))
                                     {
-                                        int damageIncrease = (Program.adventurer.currentWeaponDamage * 2) - cm.monsterResistanceDamage;
+                                        int damageIncrease = (Program.adventurer.currentWeaponDamage * 2);
 
-                                        cm.monsterHealth -= damageIncrease;
+                                        monster.monsterHP -= damageIncrease;
 
-                                        Console.WriteLine($"You attacked the {cm.monsterName} for {damageIncrease}!\n");
+                                        Console.WriteLine($"You attacked the {monster.monsterName} for {damageIncrease}!\n");
                                     }
                                     else
                                     {
-                                        cm.monsterHealth -= Program.adventurer.currentWeaponDamage - cm.monsterResistanceDamage;
-                                        Console.WriteLine($"You attacked the {cm.monsterName} for {Program.adventurer.currentWeaponDamage - cm.monsterResistanceDamage}!\n");
+                                        monster.monsterHP -= Program.adventurer.currentWeaponDamage;
+                                        Console.WriteLine($"You attacked the {monster.monsterName} for {Program.adventurer.currentWeaponDamage}!\n");
                                     }
                                 }
-                                else if (option == "Magic")
+                                else if (option == "magic")
                                 {
-                                    MagicSpells();
+                                    MagicSpell.MagicSpells();
                                     if (Program.adventurer.Mana < Program.adventurer.currentMagicCost)
                                     {
                                         goto choice1;
                                     }
-                                    else if (adventurer.Big == false)
+                                    else if (Program.adventurer.Big == false)
                                     {
                                         Console.WriteLine("You decided not to cast a spell!\n");
                                         goto choice1;
                                     }
 
-                                    else if (cast == false)
+                                    else if (Program.cast == false)
                                     {
                                         Program.adventurer.currentMagicDamage = 0;
                                         Program.adventurer.currentMagicSpell = "";
@@ -242,27 +239,27 @@ namespace Final_Project.Important_Stuff
                                     {
                                         if (resistanceArr.Any(resist => Program.adventurer.currentMagicType == resist))
                                         {
-                                            int damageReduction = (Program.adventurer.currentMagicDamage / 2) - cm.monsterResistanceDamage;
+                                            int damageReduction = (Program.adventurer.currentMagicDamage / 2);
 
-                                            cm.monsterHealth -= damageReduction;
+                                            monster.monsterHP -= damageReduction;
 
-                                            Console.WriteLine($"You cast {Program.adventurer.currentMagicSpell}!\nYou hit the {cm.monsterName} for {damageReduction}!\n");
+                                            Console.WriteLine($"You cast {Program.adventurer.currentMagicSpell}!\nYou hit the {monster.monsterName} for {damageReduction}!\n");
                                         }
 
                                         else if (weaknessArr.Any(weakness => Program.adventurer.currentMagicType == weakness))
                                         {
-                                            int damageIncrease = (Program.adventurer.currentMagicDamage * 2) - cm.monsterResistanceDamage;
+                                            int damageIncrease = (Program.adventurer.currentMagicDamage * 2);
 
-                                            cm.monsterHealth -= damageIncrease;
+                                            monster.monsterHP -= damageIncrease;
 
-                                            Console.WriteLine($"You cast {Program.adventurer.currentMagicSpell}!\nYou hit the {cm.monsterName} for {damageIncrease}!\n");
+                                            Console.WriteLine($"You cast {Program.adventurer.currentMagicSpell}!\nYou hit the {monster.monsterName} for {damageIncrease}!\n");
                                         }
 
-                                        else if (cast == true)
+                                        else if (Program.cast == true)
                                         {
-                                            cm.monsterHealth -= Program.adventurer.currentMagicDamage - cm.monsterResistanceDamage;
+                                            monster.monsterHP -= Program.adventurer.currentMagicDamage;
                                             Console.WriteLine($"You cast {Program.adventurer.currentMagicSpell}!" +
-                                                $"\nYou hit the {cm.monsterName} for {Program.adventurer.currentMagicDamage - cm.monsterResistanceDamage}!\n");
+                                                $"\nYou hit the {monster.monsterName} for {Program.adventurer.currentMagicDamage}!\n");
                                         }
                                     }
                                 }
@@ -272,25 +269,44 @@ namespace Final_Project.Important_Stuff
                                     Console.WriteLine("Please enter a valid option!");
                                     goto tryagain;
                                 }
-                                if (cm.monsterHealth <= 0)
+
+                                if (monster.monsterHP <= 0)
                                 {
-                                    Console.WriteLine($"You killed the {cm.monsterName}!\nYou gained {cm.monsterGold} gold!");
-                                    Program.adventurer.Gold += cm.monsterGold;
-                                    Program.adventurer.Exp += cm.monsterExp;
-                                    cm.statusEffect = false;
-                                    playerStatusCount = 0;
-                                    LevelUp();
+                                    if (monster.monsterName == "Mimic")
+                                    {
+
+                                    }
+                                    else
+                                    {
+                                        if (monster.monsterDrop == 0)
+                                        {
+                                            Console.WriteLine($"You killed the {monster.monsterName}!\nYou didn't get anything from them sadly.\n");
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine($"You killed the {monster.monsterName}!\nYou gained {monster.monsterDrop} {monster.monsterDropName}!\n");
+                                            int position = Inventory.monsterDropNames.IndexOf(monster.monsterDropName);
+                                            Console.WriteLine(position);
+                                            Inventory.monsterDropAmount.Insert(position, +monster.monsterDrop);
+                                        }
+                                        //Program.adventurer.Gold += monster.monsterGold;
+
+                                        Program.adventurer.Exp += monster.monsterExp;
+                                        monster.playerStatusEffect = false;
+                                        Program.playerStatusCount = 0;
+                                        Level_Up.LevelUp();
+                                    }
 
                                 tryagain1:
                                     Console.WriteLine("Do you wish to fight again? 'Yes' or 'No'");
-                                    option = Console.ReadLine();
-                                    if (option == "Yes")
+                                    option = Console.ReadLine().ToLower();
+                                    if (option == "yes")
                                     {
                                         Console.Clear();
                                         Console.WriteLine("You decided to keep on fighting\n");
                                         goto look;
                                     }
-                                    else if (option == "No")
+                                    else if (option == "no")
                                     {
                                         Console.Clear();
                                         Console.WriteLine("You decided to leave!\n");
@@ -305,57 +321,57 @@ namespace Final_Project.Important_Stuff
                                 }
                                 else
                                 {
-                                    if (cm.monsterHeal == true)
+                                    if (monster.doesHeal == true)
                                     {
-                                        if (cm.monsterHealth >= cm.maxMonsterHP)
+                                        if (monster.monsterHP >= monster.maxMonsterHP)
                                         {
-                                            cm.monsterHealth = cm.maxMonsterHP;
+                                            monster.monsterHP = monster.maxMonsterHP;
                                         }
                                         else
                                         {
-                                            Console.WriteLine($"\n{cm.monsterName} heals for {cm.monsterHealAmount}!");
-                                            cm.monsterHealth += cm.monsterHealAmount;
+                                            Console.WriteLine($"\n{monster.monsterName} heals for {monster.healAmount}!");
+                                            monster.monsterHP += monster.healAmount;
                                         }
 
                                     }
-                                    if (cm.statusEffect == true)
+                                    if (monster.playerStatusEffect == true)
                                     {
-                                        if (playerStatusCount > 0)
+                                        if (Program.playerStatusCount > 0)
                                         {
                                             if (Program.adventurer.currentMagicStatus == "Stun")
                                             {
-                                                if (playerStatusCount == 1)
+                                                if (Program.playerStatusCount == 1)
                                                 {
-                                                    Console.WriteLine($"{cm.monsterName} has been stunned\nTheir turn has been skipped for {playerStatusCount} turn");
+                                                    Console.WriteLine($"{monster.monsterName} has been stunned\nTheir turn has been skipped for {Program.playerStatusCount} turn");
                                                 }
                                                 else
                                                 {
-                                                    Console.WriteLine($"{cm.monsterName} has been stunned\nTheir turn has been skipped for {playerStatusCount} turns");
+                                                    Console.WriteLine($"{monster.monsterName} has been stunned\nTheir turn has been skipped for {Program.playerStatusCount} turns");
                                                 }
-                                                playerStatusCount--;
+                                                Program.playerStatusCount--;
                                                 goto choice1;
                                             }
                                             else if (Program.adventurer.currentMagicStatus == "Poison")
                                             {
-                                                playerStatusCount--;
-                                                Console.WriteLine($"{cm.monsterName} has been poisoned!\nThey will now take damage for the next ");
+                                                Program.playerStatusCount--;
+                                                Console.WriteLine($"{monster.monsterName} has been poisoned!\nThey will now take damage for the next ");
                                                 goto choice1;
                                             }
                                         }
                                         else
                                         {
-                                            cm.statusEffect = false;
+                                            monster.playerStatusEffect = false;
                                             goto choice1;
                                         }
 
                                     }
                                     else
                                     {
-                                        Console.WriteLine($"The {cm.monsterName} attacks you for {cm.monsterDamage}\n");
+                                        Console.WriteLine($"The {monster.monsterName} attacks you for {monster.monsterDamage}\n");
 
-                                        if (cm.monsterDamage <= Program.adventurer.currentArmorProtection)
+                                        if (monster.monsterDamage <= Program.adventurer.currentArmorProtection)
                                         {
-                                            Console.WriteLine($"\nYour armor protected you from the {cm.monsterName}'s attack!");
+                                            Console.WriteLine($"\nYour armor protected you from the {monster.monsterName}'s attack!");
                                             goto choice1;
                                         }
                                         else
@@ -363,37 +379,37 @@ namespace Final_Project.Important_Stuff
 
                                             if (Program.adventurer.currentArmorName == "God's Protection")
                                             {
-                                                int leftOver2 = (int)(cm.monsterDamage - Program.adventurer.currentArmorProtection) / 2;
+                                                int leftOver2 = (int)(monster.monsterDamage - Program.adventurer.currentArmorProtection) / 2;
                                                 Console.WriteLine($"Your armor protected you from {leftOver2} damage!\n");
                                                 goto damage2;
                                             }
 
-                                            else if (cm.doesMonsterStatusEffect == true)
+                                            else if (monster.doesStatusEffect == true)
                                             {
-                                                if (cm.monsterStatusEffect == "Poison")
+                                                if (monster.statusEffectName == "Poison")
                                                 {
                                                     int poisonChance = rnd.Next(0, 11);
                                                     if (poisonChance >= 0 && poisonChance <= 1)
                                                     {
                                                         Console.WriteLine("You have been poisoned!\n");
-                                                        monstersStatusCount = 3;
+                                                        Program.monstersStatusCount = 3;
                                                     }
 
-                                                    if (monstersStatusCount != 0)
+                                                    if (Program.monstersStatusCount != 0)
                                                     {
-                                                        monstersStatusCount--;
+                                                        Program.monstersStatusCount--;
 
-                                                        if (monstersStatusCount == 1)
+                                                        if (Program.monstersStatusCount == 1)
                                                         {
-                                                            Console.WriteLine($"You will take 5% damage for {monstersStatusCount} last time!\n");
+                                                            Console.WriteLine($"You will take 5% damage for {Program.monstersStatusCount} last time!\n");
                                                             Program.adventurer.HP -= (int)(Program.adventurer.HP * 0.05);
                                                         }
-                                                        else if (monstersStatusCount >= 1)
+                                                        else if (Program.monstersStatusCount >= 1)
                                                         {
-                                                            Console.WriteLine($"You will take 5% damage for {monstersStatusCount} more turns!\n");
+                                                            Console.WriteLine($"You will take 5% damage for {Program.monstersStatusCount} more turns!\n");
                                                             Program.adventurer.HP -= (int)(Program.adventurer.HP * 0.05);
                                                         }
-                                                        else if (monstersStatusCount == 0)
+                                                        else if (Program.monstersStatusCount == 0)
                                                         {
                                                             Console.WriteLine("You are no longer poisoned!\n");
                                                         }
@@ -405,19 +421,19 @@ namespace Final_Project.Important_Stuff
                                                 }
                                                 else
                                                 {
-                                                    cm.doesMonsterStatusEffect = false;
+                                                    monster.doesStatusEffect = false;
                                                 }
                                             }
 
                                         damage:
-                                            int leftOver = cm.monsterDamage - Program.adventurer.currentArmorProtection;
+                                            int leftOver = monster.monsterDamage - Program.adventurer.currentArmorProtection;
 
                                             Program.adventurer.HP -= leftOver;
                                         damage2:
                                             if (Program.adventurer.HP <= 0)
                                             {
-                                                Console.WriteLine("You're too injured to go on!\nYou lost all your gold!");
-                                                Program.adventurer.Gold = 0;
+                                                Console.WriteLine("You died.");
+                                                Game.Finish();
                                                 Console.ReadKey();
                                                 Console.Clear();
                                                 break;
@@ -430,7 +446,7 @@ namespace Final_Project.Important_Stuff
                                     }
                                 }
                             }
-                            else if (option == "Heal")
+                            else if (option == "heal")
                             {
                                 Magic heal = new Magic("Heal", "Holy", 20, 10);
 
@@ -462,7 +478,7 @@ namespace Final_Project.Important_Stuff
                                     goto choice1;
                                 }
                             }
-                            else if (option == "Escape")
+                            else if (option == "escape")
                             {
                                 Console.Clear();
                                 Console.WriteLine("You decided to run away!");
@@ -476,7 +492,7 @@ namespace Final_Project.Important_Stuff
                             }
                         }
 
-                        else if (option == "Escape")
+                        else if (option == "escape")
                         {
                             Console.Clear();
                             Console.WriteLine("You decided to leave the forest!\n");
@@ -490,7 +506,7 @@ namespace Final_Project.Important_Stuff
                         }
                     }
                 }
-                while (Program.adventurer.HP >= 0 || option != "Escape");
+                while (Program.adventurer.HP >= 0 || option != "escape");
 
             }
             catch (Exception e) { Console.WriteLine("game broke :( " + e); }
