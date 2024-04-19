@@ -6,24 +6,29 @@ using System.Threading.Tasks;
 
 namespace Final_Project.Areas
 {
-    internal class Forest : Area
+    internal class Shop : Area
     {
-
         internal override string CreateDescription() =>
-@"You decided to go into the forest!
-In the forest, Goblins, Slimes and Wolves are abundent!
+@"You have several different options you can choose from here!
+You can 'Explore' and go see different areas to fight monsters in!
+You can go to the 'Shop' and buy new weapons and armor!
+You can go 'Home' to rest up and apply your skill points!
 ";
 
         internal override void ReceiveChoice(string choice)
         {
             switch (choice)
             {
-                case "look":
-                    Console.WriteLine("You decided to look around!");
+                case "explore":
+                    Console.WriteLine("You return to your bedroom.");
+                    Game.Transition<Menu>();
+                    break;
+                case "home":
+                    Console.WriteLine("The chest opens and you get a key.");
                     Game.Transition<Home>();
                     break;
-                case "escape":
-                    Console.WriteLine("The chest opens and you get a key.");
+                case "shop":
+
                     break;
                 default:
                     Console.WriteLine("Invalid command.");

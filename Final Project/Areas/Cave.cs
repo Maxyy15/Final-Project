@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Final_Project.Areas
 {
-    internal class Forest : Area
+    internal class Cave : Area
     {
 
         internal override string CreateDescription() =>
