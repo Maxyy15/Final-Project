@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Final_Project.Important_Stuff
 {
-    internal class BattleSystem
+    internal class Level_Up
     {
-
     }
 }

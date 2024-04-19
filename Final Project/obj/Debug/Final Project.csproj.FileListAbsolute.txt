@@ -1,0 +1,7 @@
+C:\Users\maxwe\GAME STUFF\Final Project\Final Project\Final Project\bin\Debug\Final Project.exe.config
+C:\Users\maxwe\GAME STUFF\Final Project\Final Project\Final Project\bin\Debug\Final Project.exe
+C:\Users\maxwe\GAME STUFF\Final Project\Final Project\Final Project\bin\Debug\Final Project.pdb
+C:\Users\maxwe\GAME STUFF\Final Project\Final Project\Final Project\obj\Debug\Final Project.csproj.AssemblyReference.cache
+C:\Users\maxwe\GAME STUFF\Final Project\Final Project\Final Project\obj\Debug\Final Project.csproj.CoreCompileInputs.cache
+C:\Users\maxwe\GAME STUFF\Final Project\Final Project\Final Project\obj\Debug\Final Project.exe
+C:\Users\maxwe\GAME STUFF\Final Project\Final Project\Final Project\obj\Debug\Final Project.pdb

@@ -3,36 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\final project\\areas\\areas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|solutionrelative:final project\\areas\\areas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|c:\\users\\maxwe\\game stuff\\final project\\final project\\final project\\important stuff\\level_up.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|solutionrelative:final project\\important stuff\\level_up.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\final project\\important stuff\\battlesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|solutionrelative:final project\\important stuff\\battlesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|c:\\users\\maxwe\\game stuff\\final project\\final project\\final project\\important stuff\\fighting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|solutionrelative:final project\\important stuff\\fighting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\final project\\monsters\\monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|solutionrelative:final project\\monsters\\monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|c:\\users\\maxwe\\game stuff\\final project\\final project\\final project\\player stuff\\weapons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|solutionrelative:final project\\player stuff\\weapons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\final project\\player stuff\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|solutionrelative:final project\\player stuff\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\final project\\player stuff\\levelupsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|solutionrelative:final project\\player stuff\\levelupsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\final project\\areas\\forest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|solutionrelative:final project\\areas\\forest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|c:\\users\\maxwe\\game stuff\\final project\\final project\\final project\\areas\\arealist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|solutionrelative:final project\\areas\\arealist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\final project\\areas\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|solutionrelative:final project\\areas\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\final project\\important stuff\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|solutionrelative:final project\\important stuff\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\final project\\player stuff\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|solutionrelative:final project\\player stuff\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\final project\\important stuff\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -47,8 +39,28 @@
       "RelativeMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|solutionrelative:final project\\player stuff\\armor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\final project\\important stuff\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|solutionrelative:final project\\important stuff\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|c:\\users\\maxwe\\game stuff\\final project\\final project\\final project\\areas\\ocean.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|solutionrelative:final project\\areas\\ocean.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|c:\\users\\maxwe\\game stuff\\final project\\final project\\final project\\areas\\desert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|solutionrelative:final project\\areas\\desert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|c:\\users\\maxwe\\game stuff\\final project\\final project\\final project\\areas\\cave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|solutionrelative:final project\\areas\\cave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\final project\\areas\\forest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|solutionrelative:final project\\areas\\forest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|c:\\users\\maxwe\\game stuff\\final project\\final project\\final project\\areas\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|solutionrelative:final project\\areas\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|c:\\users\\maxwe\\game stuff\\final project\\final project\\final project\\areas\\shop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{464BD7F4-6A44-4179-8EC7-A1E5B9D3E18D}|Final Project\\Final Project.csproj|solutionrelative:final project\\areas\\shop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,47 +70,154 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LevelUpSystem.cs",
-              "DocumentMoniker": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Player Stuff\\LevelUpSystem.cs",
-              "RelativeDocumentMoniker": "Final Project\\Player Stuff\\LevelUpSystem.cs",
-              "ToolTip": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Player Stuff\\LevelUpSystem.cs",
-              "RelativeToolTip": "Final Project\\Player Stuff\\LevelUpSystem.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA4AAAA",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Important Stuff\\Program.cs",
+              "RelativeDocumentMoniker": "Final Project\\Important Stuff\\Program.cs",
+              "ToolTip": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Important Stuff\\Program.cs",
+              "RelativeToolTip": "Final Project\\Important Stuff\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T16:35:17.274Z"
+              "WhenOpened": "2024-03-27T15:07:13.295Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
+              "Title": "Level_Up.cs",
+              "DocumentMoniker": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Important Stuff\\Level_Up.cs",
+              "RelativeDocumentMoniker": "Final Project\\Important Stuff\\Level_Up.cs",
+              "ToolTip": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Important Stuff\\Level_Up.cs",
+              "RelativeToolTip": "Final Project\\Important Stuff\\Level_Up.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T14:56:26.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Fighting.cs",
+              "DocumentMoniker": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Important Stuff\\Fighting.cs",
+              "RelativeDocumentMoniker": "Final Project\\Important Stuff\\Fighting.cs",
+              "ToolTip": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Important Stuff\\Fighting.cs",
+              "RelativeToolTip": "Final Project\\Important Stuff\\Fighting.cs",
+              "ViewState": "AQIAAP4AAAAAAAAAAAAcwH4BAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T14:56:07.075Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AreaList.cs",
+              "DocumentMoniker": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Areas\\AreaList.cs",
+              "RelativeDocumentMoniker": "Final Project\\Areas\\AreaList.cs",
+              "ToolTip": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Areas\\AreaList.cs",
+              "RelativeToolTip": "Final Project\\Areas\\AreaList.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwCQAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T13:47:17.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Home.cs",
               "DocumentMoniker": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Areas\\Home.cs",
               "RelativeDocumentMoniker": "Final Project\\Areas\\Home.cs",
               "ToolTip": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Areas\\Home.cs",
               "RelativeToolTip": "Final Project\\Areas\\Home.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAcAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB4AAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T15:47:01.87Z"
+              "WhenOpened": "2024-03-27T15:47:01.87Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
+              "Title": "Menu.cs",
+              "DocumentMoniker": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Areas\\Menu.cs",
+              "RelativeDocumentMoniker": "Final Project\\Areas\\Menu.cs",
+              "ToolTip": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Areas\\Menu.cs",
+              "RelativeToolTip": "Final Project\\Areas\\Menu.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB0AAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T12:18:30.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Shop.cs",
+              "DocumentMoniker": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Areas\\Shop.cs",
+              "RelativeDocumentMoniker": "Final Project\\Areas\\Shop.cs",
+              "ToolTip": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Areas\\Shop.cs",
+              "RelativeToolTip": "Final Project\\Areas\\Shop.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAIwB0AAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T12:26:43.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "Forest.cs",
               "DocumentMoniker": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Areas\\Forest.cs",
               "RelativeDocumentMoniker": "Final Project\\Areas\\Forest.cs",
               "ToolTip": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Areas\\Forest.cs",
               "RelativeToolTip": "Final Project\\Areas\\Forest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAsAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T15:30:54.084Z"
+              "WhenOpened": "2024-03-27T15:30:54.084Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Cave.cs",
+              "DocumentMoniker": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Areas\\Cave.cs",
+              "RelativeDocumentMoniker": "Final Project\\Areas\\Cave.cs",
+              "ToolTip": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Areas\\Cave.cs",
+              "RelativeToolTip": "Final Project\\Areas\\Cave.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T14:08:32.618Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
+              "Title": "Desert.cs",
+              "DocumentMoniker": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Areas\\Desert.cs",
+              "RelativeDocumentMoniker": "Final Project\\Areas\\Desert.cs",
+              "ToolTip": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Areas\\Desert.cs",
+              "RelativeToolTip": "Final Project\\Areas\\Desert.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T14:09:22.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Ocean.cs",
+              "DocumentMoniker": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Areas\\Ocean.cs",
+              "RelativeDocumentMoniker": "Final Project\\Areas\\Ocean.cs",
+              "ToolTip": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Areas\\Ocean.cs",
+              "RelativeToolTip": "Final Project\\Areas\\Ocean.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T14:09:27.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Armor.cs",
               "DocumentMoniker": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Player Stuff\\Armor.cs",
               "RelativeDocumentMoniker": "Final Project\\Player Stuff\\Armor.cs",
@@ -106,11 +225,12 @@
               "RelativeToolTip": "Final Project\\Player Stuff\\Armor.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T15:36:03.307Z"
+              "WhenOpened": "2024-03-27T15:36:03.307Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "Magic.cs",
               "DocumentMoniker": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Player Stuff\\Magic.cs",
               "RelativeDocumentMoniker": "Final Project\\Player Stuff\\Magic.cs",
@@ -118,94 +238,33 @@
               "RelativeToolTip": "Final Project\\Player Stuff\\Magic.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T15:27:32.383Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Weapons.cs",
-              "DocumentMoniker": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Player Stuff\\Weapons.cs",
-              "RelativeDocumentMoniker": "Final Project\\Player Stuff\\Weapons.cs",
-              "ToolTip": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Player Stuff\\Weapons.cs",
-              "RelativeToolTip": "Final Project\\Player Stuff\\Weapons.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T15:27:23.93Z",
+              "WhenOpened": "2024-03-27T15:27:32.383Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Monster.cs",
-              "DocumentMoniker": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Monsters\\Monster.cs",
-              "RelativeDocumentMoniker": "Final Project\\Monsters\\Monster.cs",
-              "ToolTip": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Monsters\\Monster.cs",
-              "RelativeToolTip": "Final Project\\Monsters\\Monster.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T15:24:37.25Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "Game.cs",
               "DocumentMoniker": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Important Stuff\\Game.cs",
               "RelativeDocumentMoniker": "Final Project\\Important Stuff\\Game.cs",
               "ToolTip": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Important Stuff\\Game.cs",
               "RelativeToolTip": "Final Project\\Important Stuff\\Game.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAwwA8AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T15:19:48.699Z"
+              "WhenOpened": "2024-03-27T15:19:48.699Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Player Stuff\\Player.cs",
               "RelativeDocumentMoniker": "Final Project\\Player Stuff\\Player.cs",
               "ToolTip": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Player Stuff\\Player.cs",
               "RelativeToolTip": "Final Project\\Player Stuff\\Player.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAcwCcAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T15:17:07.791Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Important Stuff\\Program.cs",
-              "RelativeDocumentMoniker": "Final Project\\Important Stuff\\Program.cs",
-              "ToolTip": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Important Stuff\\Program.cs",
-              "RelativeToolTip": "Final Project\\Important Stuff\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T15:07:13.295Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Areas.cs",
-              "DocumentMoniker": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Areas\\Areas.cs",
-              "RelativeDocumentMoniker": "Final Project\\Areas\\Areas.cs",
-              "ToolTip": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Areas\\Areas.cs",
-              "RelativeToolTip": "Final Project\\Areas\\Areas.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T15:20:21.102Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BattleSystem.cs",
-              "DocumentMoniker": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Important Stuff\\BattleSystem.cs",
-              "RelativeDocumentMoniker": "Final Project\\Important Stuff\\BattleSystem.cs",
-              "ToolTip": "C:\\Users\\maxwe\\GAME STUFF\\Final Project\\Final Project\\Final Project\\Important Stuff\\BattleSystem.cs",
-              "RelativeToolTip": "Final Project\\Important Stuff\\BattleSystem.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T15:32:03.264Z",
+              "WhenOpened": "2024-03-27T15:17:07.791Z",
               "EditorCaption": ""
             }
           ]

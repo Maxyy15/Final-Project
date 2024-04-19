@@ -43,18 +43,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Areas\AreaList.cs" />
     <Compile Include="Areas\Areas.cs" />
+    <Compile Include="Areas\Cave.cs" />
+    <Compile Include="Areas\Desert.cs" />
+    <Compile Include="Areas\Ocean.cs" />
     <Compile Include="Areas\Forest.cs" />
     <Compile Include="Areas\Home.cs" />
-    <Compile Include="Important Stuff\BattleSystem.cs" />
+    <Compile Include="Areas\Menu.cs" />
+    <Compile Include="Areas\Shop.cs" />
+    <Compile Include="Important Stuff\Fighting.cs" />
     <Compile Include="Important Stuff\Game.cs" />
+    <Compile Include="Important Stuff\Level_Up.cs" />
     <Compile Include="Monsters\Goblin.cs" />
     <Compile Include="Monsters\Monster.cs" />
     <Compile Include="Monsters\Skeleton.cs" />
     <Compile Include="Monsters\Slime.cs" />
     <Compile Include="Monsters\Wolf.cs" />
     <Compile Include="Player Stuff\Armor.cs" />
-    <Compile Include="Player Stuff\LevelUpSystem.cs" />
     <Compile Include="Player Stuff\Magic.cs" />
     <Compile Include="Player Stuff\Player.cs" />
     <Compile Include="Player Stuff\Weapons.cs" />
