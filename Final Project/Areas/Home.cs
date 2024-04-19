@@ -1,4 +1,5 @@
 ﻿using Final_Project;
+using Final_Project.Player_Stuff;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +10,15 @@ namespace Final_Project.Areas
 {
     internal class Home : Area
     {
+
         internal override string CreateDescription() =>
 @"This is your home that you inherited from your late grandfather, an adventurer just like you!
 He left this to you so you could have a place to stay while you finish his quest to save the world from Tiamat's wrath!
-You can 'Rest', check your 'Inventory', swap your 'Equipment' or 'Leave'!
+
+You can 'Rest' to regain your health and mana!
+Check your 'Inventory' and see how much of everything you have!
+Swap your 'Equipment' in case you want to try out different weapons!
+Or 'Leave' and start your day adventuring!
 ";
 
         internal override void ReceiveChoice(string choice)
@@ -40,11 +46,13 @@ You can 'Rest', check your 'Inventory', swap your 'Equipment' or 'Leave'!
                 case "inventory":
                     Console.WriteLine("You decided to look through the things you've obtained!");
 
+                    Inventory.PlayerInventory();
                     break;
 
                 case "equipment":
                     Console.WriteLine("You decided to look through the things you've obtained!");
 
+                    Inventory.PlayerEquipment();
                     break;
 
                 case "leave":

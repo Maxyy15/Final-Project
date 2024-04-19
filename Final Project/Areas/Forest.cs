@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Final_Project.Important_Stuff;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,20 +11,24 @@ namespace Final_Project.Areas
     {
 
         internal override string CreateDescription() =>
-@"You decided to go into the forest!
-In the forest, Goblins, Slimes and Wolves are abundent!
+@"You decided to go towards the forest!
+You see a sign warning you about the increase in monsters!
+Specifically Goblins, Wolves and Slimes!
+
+You can 'Continue' to search for enemies to fight or 'Escape' to fight another day!
 ";
 
         internal override void ReceiveChoice(string choice)
         {
             switch (choice)
             {
-                case "look":
-                    Console.WriteLine("You decided to look around!");
-                    Game.Transition<Home>();
+                case "continue":
+                    Console.WriteLine("You decided to go deep into the forest!");
+                    Fighting.Fight();
                     break;
                 case "escape":
-                    Console.WriteLine("The chest opens and you get a key.");
+                    Console.WriteLine("You decide to go back to safety!");
+                    Game.Transition<Menu>();
                     break;
                 default:
                     Console.WriteLine("Invalid command.");

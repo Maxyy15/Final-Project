@@ -55,12 +55,17 @@
     <Compile Include="Important Stuff\Fighting.cs" />
     <Compile Include="Important Stuff\Game.cs" />
     <Compile Include="Important Stuff\Level_Up.cs" />
+    <Compile Include="Important Stuff\MagicSpell.cs" />
     <Compile Include="Monsters\Goblin.cs" />
     <Compile Include="Monsters\Monster.cs" />
+    <Compile Include="Monsters\Troll.cs" />
+    <Compile Include="Monsters\Spider.cs" />
     <Compile Include="Monsters\Skeleton.cs" />
     <Compile Include="Monsters\Slime.cs" />
+    <Compile Include="Monsters\Mimic.cs" />
     <Compile Include="Monsters\Wolf.cs" />
     <Compile Include="Player Stuff\Armor.cs" />
+    <Compile Include="Player Stuff\Inventory.cs" />
     <Compile Include="Player Stuff\Magic.cs" />
     <Compile Include="Player Stuff\Player.cs" />
     <Compile Include="Player Stuff\Weapons.cs" />
