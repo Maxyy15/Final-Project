@@ -11,7 +11,7 @@ namespace Final_Project
         public string name;
         public int HP = 100;
         public int Mana = 50;
-        public int Gold = 500;
+        public int Gold = 500000000;
         public int Exp = 0;
         public int LevelUpCost = 30;
         public int Level = 1;

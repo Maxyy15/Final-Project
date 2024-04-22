@@ -14,18 +14,18 @@ namespace Final_Project.Areas
 @"You decided to go towards the cave!
 The sounds of growls, the clacking of bones and the scuttling of bugs fill your ears as you approach!
 
-You can 'Continue' to search for enemies to fight or 'Escape' to fight another day!
+You can 'Continue' to search for enemies to fight or 'Leave' to fight another day!
 ";
 
         internal override void ReceiveChoice(string choice)
         {
             switch (choice)
             {
-                case "look":
+                case "continue":
                     Console.WriteLine("You decided to look around!");
                     Fighting.Fight();
                     break;
-                case "escape":
+                case "leave":
                     Console.WriteLine("The chest opens and you get a key.");
                     Game.Transition<Menu>();
                     break;

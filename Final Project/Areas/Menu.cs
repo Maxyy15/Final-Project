@@ -20,15 +20,16 @@ You can go 'Home' to rest up and apply your skill points!
             switch (choice)
             {
                 case "explore":
-                    Console.WriteLine("You return to your bedroom.");
+                    Console.WriteLine("You decided to go explore!");
                     Game.Transition<AreaList>();
                     break;
                 case "home":
-                    Console.WriteLine("The chest opens and you get a key.");
+                    Console.WriteLine("You decided to go home!");
                     Game.Transition<Home>();
                     break;
                 case "shop":
-
+                    Console.WriteLine("You decided to go to the shop!");
+                    Game.Transition<Shop>();
                     break;
                 default:
                     Console.WriteLine("Invalid command.");

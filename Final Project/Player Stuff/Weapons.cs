@@ -11,12 +11,16 @@ namespace Final_Project.Player_Stuff
         public string weaponName;
         public int weaponDamage;
         public int weaponCost;
+        public bool isBoughtWeapon;
 
-        public Weapons(string weaponName, int weaponDamage, int weaponCost)
+        public Weapons(string weaponName, int weaponDamage, int weaponCost, bool bought)
         {
             this.weaponName = weaponName;
             this.weaponDamage = weaponDamage;
             this.weaponCost = weaponCost;
+            isBoughtWeapon = bought;
         }
+
+        
     }
 }

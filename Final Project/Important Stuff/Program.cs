@@ -24,7 +24,14 @@ namespace Final_Project
         {
 
             Initializing.Initialize();
-            Weapons woodenSword = new Weapons("Wooden Sword", 5, 0);
+
+            Weapons woodenSword = new Weapons("Wooden Sword", 5, 0, true);
+            Inventory.WeaponsList.Insert(0, woodenSword.weaponName);
+            Inventory.WeaponDamage.Insert(0, woodenSword.weaponDamage);
+            Armor uselessArmor = new Armor("Useless Armor", 1, 0, true);
+            Inventory.ArmorList.Insert(0, uselessArmor.armorName);
+            Inventory.ArmorProtection.Insert(0, uselessArmor.damageReduction);
+
             var game = new Game();
             Console.WriteLine("Hello Adventurer!\nWelcome to the Text Based Adventure Game!\nPlease enter your name below!");
             adventurer.name = Console.ReadLine();
@@ -34,7 +41,7 @@ namespace Final_Project
             Console.ReadKey();
             Console.Clear();
 
-            Console.WriteLine("You recieved a wooden sword in the mail from the shop!\nPress any key to continue!");
+            Console.WriteLine("You recieved a 'Wooden Sword' and 'Useless Armor' in the mail from the shop!\nPress any key to continue!");
             adventurer.currentWeaponDamage = woodenSword.weaponDamage;
             adventurer.currentWeaponName = woodenSword.weaponName;
             Console.ReadKey();
@@ -43,9 +50,13 @@ namespace Final_Project
             game.Add(new Home());
             game.Add(new Menu());
             game.Add(new Shop());
+
             game.Add(new AreaList());
             game.Add(new Forest());
-            
+            game.Add(new Cave());
+            game.Add(new Desert());
+            game.Add(new Ocean());
+
             while (!game.IsGameOver())
             {
                 Console.WriteLine("--");
