@@ -1,10 +1,15 @@
 ﻿using Final_Project.Areas;
+using Final_Project.Important_Stuff;
 using Final_Project.Player_Stuff;
 using System;
+using System.IO;
+using System.Drawing;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+
 
 namespace Final_Project
 {
@@ -17,6 +22,8 @@ namespace Final_Project
 
         static void Main(string[] args)
         {
+
+            Initializing.Initialize();
             Weapons woodenSword = new Weapons("Wooden Sword", 5, 0);
             var game = new Game();
             Console.WriteLine("Hello Adventurer!\nWelcome to the Text Based Adventure Game!\nPlease enter your name below!");

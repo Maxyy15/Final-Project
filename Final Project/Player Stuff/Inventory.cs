@@ -8,8 +8,8 @@ namespace Final_Project.Player_Stuff
 {
     internal class Inventory
     {
-        public static List<string> monsterDropNames = new List<string>(100);
-        public static List<int> monsterDropAmount = new List<int>(100);
+        public static List<string> monsterDropNames = new List<string>();
+        public static List<int> monsterDropAmount = new List<int>();
 
         public enum Armor
         {
@@ -23,17 +23,15 @@ namespace Final_Project.Player_Stuff
 
         public static void PlayerInventory()
         {
-            //for(int i = 0; i < monsterDropNames.Count; i++) 
-            //{ 
-            //    Console.WriteLine($"You have ", monsterDropAmount[i], monsterDropNames[i]);
-            //}
-            foreach(string i in monsterDropNames)
-            {
-                foreach (int j in monsterDropAmount)
-                {
-                    Console.WriteLine(i, j);
+            int x = 0;
 
+            foreach (string i in monsterDropNames)
+            {
+                if (monsterDropAmount[x] != 0)
+                {
+                    Console.WriteLine("You have " + monsterDropAmount[x] + " " + monsterDropNames[x]);
                 }
+                x++;
             }
         }
 

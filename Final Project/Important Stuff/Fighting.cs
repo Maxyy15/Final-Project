@@ -21,7 +21,7 @@ namespace Final_Project.Important_Stuff
             string option;
             Random rnd = new Random();
         start1:
-            
+
             try
             {
                 do
@@ -63,10 +63,9 @@ namespace Final_Project.Important_Stuff
 
                                 if (rn >= 0 && rn <= 4)
                                 {
-                                    Goblin goblin = new Goblin("Goblin", 20, 5, rnd.Next(4, 10), rnd.Next(2,6));
+                                    Goblin goblin = new Goblin("Goblin", 20, 5, rnd.Next(4, 10), rnd.Next(2, 6));
 
                                     goblin.monsterDropName = "Goblin Teeth";
-                                    Inventory.monsterDropNames.Insert(0, "Goblin Teeth");
 
                                     resistanceArr[0] = "Water";
                                     weaknessArr[0] = "Fire";
@@ -75,10 +74,9 @@ namespace Final_Project.Important_Stuff
                                 }
                                 else if (rn > 4 && rn <= 9)
                                 {
-                                    Wolf wolf = new Wolf("Wolf", 15, 10, rnd.Next(4, 10), rnd.Next(0,1));
+                                    Wolf wolf = new Wolf("Wolf", 15, 10, rnd.Next(4, 10), rnd.Next(0, 2));
 
                                     wolf.monsterDropName = "Wolf Pelt";
-                                    Inventory.monsterDropNames.Insert(1, "Wolf Pelt");
 
                                     resistanceArr[0] = "Air";
                                     resistanceArr[1] = "";
@@ -88,10 +86,9 @@ namespace Final_Project.Important_Stuff
                                 }
                                 else if (rn > 9 && rn <= 14)
                                 {
-                                    Slime slime = new Slime("Slime", 10, 15, rnd.Next(4, 10), rnd.Next(2,5));
+                                    Slime slime = new Slime("Slime", 10, 15, rnd.Next(4, 10), rnd.Next(2, 5));
 
                                     slime.monsterDropName = "Drops of Slime";
-                                    Inventory.monsterDropNames.Insert(2, "Drops of Slime");
 
                                     slime.maxMonsterHP = slime.monsterHP;
                                     slime.healAmount = 3;
@@ -111,7 +108,7 @@ namespace Final_Project.Important_Stuff
                                 if (rn >= 0 && rn <= 3)
                                 {
                                     Mimic mimic = new Mimic("Mimic", 40, 18, rnd.Next(15, 40), rnd.Next(20, 80));
-                                    
+
                                     resistanceArr[0] = "Water";
                                     weaknessArr[0] = "Lightning";
 
@@ -122,7 +119,6 @@ namespace Final_Project.Important_Stuff
                                     Skeleton skeleton = new Skeleton("Skeleton", 50, 14, rnd.Next(30, 60), rnd.Next(2, 6));
 
                                     skeleton.monsterDropName = "Bones";
-                                    Inventory.monsterDropNames.Insert(3, "Bones");
 
                                     resistanceArr[0] = "Dark";
                                     weaknessArr[0] = "Holy";
@@ -134,7 +130,6 @@ namespace Final_Project.Important_Stuff
                                     Spider spider = new Spider("Spider", 30, 6, rnd.Next(10, 40), rnd.Next(1, 3));
 
                                     spider.monsterDropName = "Spider Poison";
-                                    Inventory.monsterDropNames.Insert(4, "Spider Poison");
 
                                     spider.doesStatusEffect = true;
                                     spider.statusEffectName = "Poison";
@@ -149,7 +144,6 @@ namespace Final_Project.Important_Stuff
                                     Troll troll = new Troll("Troll", 70, 20, rnd.Next(70, 100), rnd.Next(0, 1));
 
                                     troll.monsterDropName = "Bottle of Troll Blood";
-                                    Inventory.monsterDropNames.Insert(5, "Bottles of Troll Blood");
 
                                     troll.healAmount = 5;
                                     troll.maxMonsterHP = troll.monsterHP;
@@ -169,6 +163,11 @@ namespace Final_Project.Important_Stuff
                                 goto start1;
                             }
 
+                            if (monster == null)
+                            {
+                                goto look;
+                            }
+
                             Console.WriteLine($"You encountered a {monster.monsterName}!\n");
                         choice1:
                             Console.WriteLine($"Your current HP is {Program.adventurer.HP}" +
@@ -178,7 +177,7 @@ namespace Final_Project.Important_Stuff
 
                             Console.WriteLine($"The {monster.monsterName}'s HP is {monster.monsterHP}" +
                                 $"\nThe {monster.monsterName}'s Damage is {monster.monsterDamage}");
-                                //$"\nThe {monster.monsterName}'s Defense is {monster.monsterResistanceDamage}\n");
+                            //$"\nThe {monster.monsterName}'s Defense is {monster.monsterResistanceDamage}\n");
 
                             Console.WriteLine("Do you 'Attack', 'Heal' or do you 'Escape'?");
                             option = Console.ReadLine().ToLower();
@@ -274,28 +273,39 @@ namespace Final_Project.Important_Stuff
                                 {
                                     if (monster.monsterName == "Mimic")
                                     {
+                                        Console.WriteLine($"You killed the {monster.monsterName}!\nYou gained ");
+                                        Console.ForegroundColor = ConsoleColor.DarkYellow;
+                                        Console.Write($"{monster.monsterGold} gold");
+                                        Console.ResetColor();
+                                        Console.Write("!");
 
+                                        Program.adventurer.Gold += monster.monsterGold;
                                     }
                                     else
                                     {
                                         if (monster.monsterDrop == 0)
                                         {
-                                            Console.WriteLine($"You killed the {monster.monsterName}!\nYou didn't get anything from them sadly.\n");
+                                            Console.WriteLine($"You killed the {monster.monsterName}!\nYou didn't get any drops from them sadly.\nYou gained {monster.monsterExp} exp!\n");
                                         }
                                         else
                                         {
-                                            Console.WriteLine($"You killed the {monster.monsterName}!\nYou gained {monster.monsterDrop} {monster.monsterDropName}!\n");
-                                            int position = Inventory.monsterDropNames.IndexOf(monster.monsterDropName);
-                                            Console.WriteLine(position);
-                                            Inventory.monsterDropAmount.Insert(position, +monster.monsterDrop);
+                                            Console.WriteLine($"You killed the {monster.monsterName}!\nYou gained {monster.monsterDrop} {monster.monsterDropName}!+" +
+                                                $"\nYou gained {monster.monsterExp} exp!\n");
                                         }
-                                        //Program.adventurer.Gold += monster.monsterGold;
 
-                                        Program.adventurer.Exp += monster.monsterExp;
-                                        monster.playerStatusEffect = false;
-                                        Program.playerStatusCount = 0;
-                                        Level_Up.LevelUp();
+                                        int position = Inventory.monsterDropNames.IndexOf(monster.monsterDropName);
+                                        Console.WriteLine(position);
+                                        Inventory.monsterDropAmount[position] += monster.monsterDrop;
                                     }
+
+                                    
+
+                                    Program.adventurer.Exp += monster.monsterExp;
+                                    monster.playerStatusEffect = false;
+                                    Program.playerStatusCount = 0;
+                                    Level_Up.LevelUp();
+
+                                    monster = null;
 
                                 tryagain1:
                                     Console.WriteLine("Do you wish to fight again? 'Yes' or 'No'");
@@ -513,3 +523,22 @@ namespace Final_Project.Important_Stuff
         }
     }
 }
+//Console.WriteLine($"Your current ");
+//Console.ForegroundColor = ConsoleColor.Red; Console.Write("HP"); Console.ResetColor();
+//Console.Write("is");
+//Console.ForegroundColor = ConsoleColor.Red; Console.Write("{Program.adventurer.HP}"); Console.ResetColor();
+
+//Console.Write($"\nYour current ");
+//Console.ForegroundColor = ConsoleColor.Blue; Console.Write("Mana"); Console.ResetColor();
+//Console.Write(" is ");
+//Console.ForegroundColor = ConsoleColor.Blue; Console.Write($"{Program.adventurer.Mana}"); Console.ResetColor();
+
+//Console.Write($"\nYour current");
+//Console.ForegroundColor = ConsoleColor.DarkRed; Console.Write(" Damage "); Console.ResetColor();
+//Console.Write("is");
+//Console.ForegroundColor = ConsoleColor.DarkRed; Console.Write($" {Program.adventurer.currentWeaponDamage}"); Console.ResetColor();
+
+//Console.Write($"\nYour current");
+//Console.ForegroundColor = ConsoleColor.Gray; Console.Write(" Defense "); Console.ResetColor();
+//Console.Write("is");
+//Console.ForegroundColor = ConsoleColor.Gray; Console.Write($"{Program.adventurer.currentArmorProtection}\n"); Console.ResetColor();

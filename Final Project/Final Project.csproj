@@ -52,8 +52,10 @@
     <Compile Include="Areas\Home.cs" />
     <Compile Include="Areas\Menu.cs" />
     <Compile Include="Areas\Shop.cs" />
+    <Compile Include="Important Stuff\Buying.cs" />
     <Compile Include="Important Stuff\Fighting.cs" />
     <Compile Include="Important Stuff\Game.cs" />
+    <Compile Include="Important Stuff\Initializing.cs" />
     <Compile Include="Important Stuff\Level_Up.cs" />
     <Compile Include="Important Stuff\MagicSpell.cs" />
     <Compile Include="Monsters\Goblin.cs" />
@@ -75,6 +77,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Downloads\Colorful.Console-master\Colorful.Console-master\src\Colorful.Console\Colorful.Console.csproj">
+      <Project>{82824b99-a58a-49aa-bc7f-191a170e1752}</Project>
+      <Name>Colorful.Console</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
