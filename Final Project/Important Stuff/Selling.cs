@@ -22,7 +22,7 @@ namespace Final_Project.Important_Stuff
                 }
                 x++;
             }
-            Console.WriteLine("Do you wish to sell everything?");
+            Console.WriteLine("Do you wish to sell everything?\n'Yes' or 'No'?");
 
             string answer = Console.ReadLine().ToLower();
             Console.Clear();

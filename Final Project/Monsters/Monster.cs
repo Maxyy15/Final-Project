@@ -14,6 +14,7 @@ namespace Final_Project.Monsters
         public int maxMonsterHP;
         public int healAmount;
         public bool doesHeal;
+        public bool hasBeenKilled = false;
 
         public int monsterDamage;
 

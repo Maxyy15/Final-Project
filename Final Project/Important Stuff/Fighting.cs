@@ -70,6 +70,8 @@ namespace Final_Project.Important_Stuff
                                     resistanceArr[0] = "Water";
                                     weaknessArr[0] = "Fire";
 
+                                    Learning.goblin = true;
+
                                     monster = goblin;
                                 }
                                 else if (rn > 4 && rn <= 9)
@@ -79,8 +81,10 @@ namespace Final_Project.Important_Stuff
                                     wolf.monsterDropName = "Wolf Pelt";
 
                                     resistanceArr[0] = "Air";
-                                    resistanceArr[1] = "";
+                                    resistanceArr[1] = "Earth";
                                     weaknessArr[0] = "Fire";
+
+                                    Learning.wolf = true;
 
                                     monster = wolf;
                                 }
@@ -93,8 +97,11 @@ namespace Final_Project.Important_Stuff
                                     slime.maxMonsterHP = slime.monsterHP;
                                     slime.healAmount = 3;
 
+
                                     resistanceArr[0] = "Fire";
                                     weaknessArr[0] = "Air";
+
+                                    Learning.slime = true;
 
                                     monster = slime;
                                 }
@@ -162,12 +169,12 @@ namespace Final_Project.Important_Stuff
                                 Console.WriteLine("You found...\n\nNothing..\n");
                                 goto look;
                             }
-
-                            //if (monster == null)
-                            //{
-                            //    goto look;
-                            //}
-
+                            else
+                            {
+                                Console.Clear();
+                                Console.WriteLine("You found...\n\nNothing..\n");
+                                goto look;
+                            }
                             Console.WriteLine($"You encountered a {monster.monsterName}!\n");
                         choice1:
                             Console.WriteLine($"Your current HP is {Program.adventurer.HP}" +
@@ -293,12 +300,13 @@ namespace Final_Project.Important_Stuff
                                                 $"\nYou also gained {monster.monsterExp} exp!\n");
                                         }
 
+                                        monster.hasBeenKilled = true;
                                         int position = Inventory.monsterDropNames.IndexOf(monster.monsterDropName);
                                         //Console.WriteLine(position);
                                         Inventory.monsterDropAmount[position] += monster.monsterDrop;
                                     }
 
-                                    
+
 
                                     Program.adventurer.Exp += monster.monsterExp;
                                     monster.playerStatusEffect = false;

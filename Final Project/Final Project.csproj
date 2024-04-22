@@ -45,10 +45,11 @@
   <ItemGroup>
     <Compile Include="Areas\AreaList.cs" />
     <Compile Include="Areas\Area.cs" />
-    <Compile Include="Areas\Cave.cs" />
-    <Compile Include="Areas\Desert.cs" />
-    <Compile Include="Areas\Ocean.cs" />
-    <Compile Include="Areas\Forest.cs" />
+    <Compile Include="Areas\Fights\Cave.cs" />
+    <Compile Include="Areas\Fights\Desert.cs" />
+    <Compile Include="Areas\Fights\TiamatsLair.cs" />
+    <Compile Include="Areas\Fights\Sea.cs" />
+    <Compile Include="Areas\Fights\Forest.cs" />
     <Compile Include="Areas\Home.cs" />
     <Compile Include="Areas\Menu.cs" />
     <Compile Include="Areas\Shop.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="Important Stuff\Fighting.cs" />
     <Compile Include="Important Stuff\Game.cs" />
     <Compile Include="Important Stuff\Initializing.cs" />
+    <Compile Include="Important Stuff\Learning.cs" />
     <Compile Include="Important Stuff\Level_Up.cs" />
     <Compile Include="Important Stuff\MagicSpell.cs" />
     <Compile Include="Important Stuff\Selling.cs" />
