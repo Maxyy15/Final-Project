@@ -25,9 +25,7 @@ Keep in mind, the further down the list the harder the monsters!
             switch (choice)
             {
                 case "forest":
-                    Console.WriteLine("You decided to go to the forest!");
                     Program.currentArea = "forest";
-
                     Game.Transition<Forest>();
                     break;
 
@@ -35,6 +33,8 @@ Keep in mind, the further down the list the harder the monsters!
 
                     Console.WriteLine("You decided to go to the cave!");
                     Program.currentArea = "cave";
+                    Game.Transition<Cave>();
+
                     break;
 
                 case "desert":

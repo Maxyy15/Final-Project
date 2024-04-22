@@ -63,7 +63,7 @@ namespace Final_Project.Important_Stuff
 
                                 if (rn >= 0 && rn <= 4)
                                 {
-                                    Goblin goblin = new Goblin("Goblin", 20, 5, rnd.Next(4, 10), rnd.Next(2, 6));
+                                    Goblin goblin = new Goblin("Goblin", 20, 5, rnd.Next(4, 10), rnd.Next(1, 4));
 
                                     goblin.monsterDropName = "Goblin Teeth";
 
@@ -86,7 +86,7 @@ namespace Final_Project.Important_Stuff
                                 }
                                 else if (rn > 9 && rn <= 14)
                                 {
-                                    Slime slime = new Slime("Slime", 10, 15, rnd.Next(4, 10), rnd.Next(2, 5));
+                                    Slime slime = new Slime("Slime", 10, 15, rnd.Next(4, 10), rnd.Next(1, 3));
 
                                     slime.monsterDropName = "Drops of Slime";
 
@@ -116,7 +116,7 @@ namespace Final_Project.Important_Stuff
                                 }
                                 else if (rn > 3 && rn <= 7)
                                 {
-                                    Skeleton skeleton = new Skeleton("Skeleton", 50, 14, rnd.Next(30, 60), rnd.Next(2, 6));
+                                    Skeleton skeleton = new Skeleton("Skeleton", 50, 14, rnd.Next(30, 60), rnd.Next(1, 3));
 
                                     skeleton.monsterDropName = "Bones";
 
@@ -156,17 +156,17 @@ namespace Final_Project.Important_Stuff
                                 }
                             }
 
-                            else
+                            else if (monster == null)
                             {
                                 Console.Clear();
                                 Console.WriteLine("You found...\n\nNothing..\n");
-                                goto start1;
-                            }
-
-                            if (monster == null)
-                            {
                                 goto look;
                             }
+
+                            //if (monster == null)
+                            //{
+                            //    goto look;
+                            //}
 
                             Console.WriteLine($"You encountered a {monster.monsterName}!\n");
                         choice1:
@@ -289,12 +289,12 @@ namespace Final_Project.Important_Stuff
                                         }
                                         else
                                         {
-                                            Console.WriteLine($"You killed the {monster.monsterName}!\nYou gained {monster.monsterDrop} {monster.monsterDropName}!+" +
-                                                $"\nYou gained {monster.monsterExp} exp!\n");
+                                            Console.WriteLine($"You killed the {monster.monsterName}!\nYou gained {monster.monsterDrop} {monster.monsterDropName}!" +
+                                                $"\nYou also gained {monster.monsterExp} exp!\n");
                                         }
 
                                         int position = Inventory.monsterDropNames.IndexOf(monster.monsterDropName);
-                                        Console.WriteLine(position);
+                                        //Console.WriteLine(position);
                                         Inventory.monsterDropAmount[position] += monster.monsterDrop;
                                     }
 
@@ -320,6 +320,7 @@ namespace Final_Project.Important_Stuff
                                     {
                                         Console.Clear();
                                         Console.WriteLine("You decided to leave!\n");
+                                        Game.Transition<Menu>();
                                         break;
                                     }
                                     else
@@ -492,6 +493,7 @@ namespace Final_Project.Important_Stuff
                             {
                                 Console.Clear();
                                 Console.WriteLine("You decided to run away!");
+                                Game.Transition<Menu>();
                                 break;
                             }
                             else
@@ -505,7 +507,8 @@ namespace Final_Project.Important_Stuff
                         else if (option == "escape")
                         {
                             Console.Clear();
-                            Console.WriteLine("You decided to leave the forest!\n");
+                            Console.WriteLine("You decided to leave!\n");
+                            Game.Transition<Menu>();
                             break;
                         }
                         else

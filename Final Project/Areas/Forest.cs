@@ -15,18 +15,20 @@ namespace Final_Project.Areas
 You see a sign warning you about the increase in monsters!
 Specifically Goblins, Wolves and Slimes!
 
-You can 'Continue' to search for enemies to fight or 'Escape' to fight another day!
+Please press any key to continue!
 ";
 
         internal override void ReceiveChoice(string choice)
         {
+            choice = "continue";
             switch (choice)
             {
                 case "continue":
-                    Console.WriteLine("You decided to go deep into the forest!");
+                    //Console.WriteLine("You decided to go deep into the forest!");
+                    //Console.WriteLine("Please press any key to continue!");
                     Fighting.Fight();
                     break;
-                case "escape":
+                case "leave":
                     Console.WriteLine("You decide to go back to safety!");
                     Game.Transition<Menu>();
                     break;

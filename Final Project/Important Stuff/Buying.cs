@@ -9,18 +9,32 @@ namespace Final_Project.Important_Stuff
 {
     internal class Buying
     {
+        public static Weapons bronzeSword = new Weapons("Bronze Sword", 10, 5, false);
+        public static Weapons ironSword = new Weapons("Iron Sword", 25, 15, false);
+        public static Weapons platinumSword = new Weapons("Platinum Sword", 30, 20, false);
+        public static Weapons titaniumSword = new Weapons("Titanium Sword", 50, 35, false);
+        public static Weapons amalgamSword = new Weapons("Amalgam's Sword", 100, 70, false);
+        public static Weapons gemSword = new Weapons("The Gem Dragon's Bane", 500, 355, false);
+        public static Weapons godSword = new Weapons("God's Wrath", 10000, 5000, false);
+
+
+        public static Armor bronzeArmor = new Armor("Bronze Armor", 5, 15, false);
+        public static Armor ironArmor = new Armor("Iron Armor", 10, 30, false);
+        public static Armor platinumArmor = new Armor("Platinum Armor", 20, 60, false);
+        public static Armor titaniumArmor = new Armor("Titanium Armor", 40, 100, false);
+        public static Armor amalgamArmor = new Armor("Amalgam's Armor", 100, 400, false);
+        public static Armor gemArmor = new Armor("The Gem Dragon's Scales", 400, 1000, false);
+        public static Armor godArmor = new Armor("God's Protection", 10000, 50000, false);
+
         public static void ShopWeapons()
         {
             string option;
-            Weapons bronzeSword = new Weapons("Bronze Sword", 10, 5);
-            Weapons ironSword = new Weapons("Iron Sword", 25, 15);
-            Weapons platinumSword = new Weapons("Platinum Sword", 30, 20);
-            Weapons titaniumSword = new Weapons("Titanium Sword", 50, 35);
-            Weapons amalgamSword = new Weapons("Amalgam's Sword", 100, 70);
-            Weapons gemSword = new Weapons("The Gem Dragon's Bane", 500, 355);
-            Weapons godSword = new Weapons("God's Wrath", 10000, 5000);
-
+            
         shop:
+            Console.WriteLine("You have ");
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine(Program.adventurer.Gold + " gold!");
+            Console.ResetColor();
             Console.WriteLine("You see several different weapons to chose from!\n");
             Console.WriteLine($"Type the name to buy the weapon!\n" +
                 $"\n'Bronze Sword', it costs {bronzeSword.weaponCost} gold, and does {bronzeSword.weaponDamage} damage!" +
@@ -42,6 +56,12 @@ namespace Final_Project.Important_Stuff
                         Console.WriteLine("Sorry but you don't have enough gold to buy the sword.");
                         break;
                     }
+                    else if (bronzeSword.isBoughtWeapon == true)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("You already bought this weapon!");
+                        break;
+                    }
                     else
                     {
                         Console.Clear();
@@ -49,6 +69,10 @@ namespace Final_Project.Important_Stuff
                         Console.WriteLine("You bought the Bronze sword!");
                         Program.adventurer.currentWeaponDamage = bronzeSword.weaponDamage;
                         Program.adventurer.currentWeaponName = bronzeSword.weaponName;
+                        Inventory.WeaponsList.Insert(1, bronzeSword.weaponName);
+                        Inventory.WeaponDamage.Insert(1, (bronzeSword.weaponDamage));
+                        bronzeSword.isBoughtWeapon = true;
+
                     }
                     break;
 
@@ -59,6 +83,12 @@ namespace Final_Project.Important_Stuff
                         Console.WriteLine("Sorry but you don't have enough gold to buy the sword.");
                         break;
                     }
+                    else if (ironSword.isBoughtWeapon == true)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("You already bought this weapon!");
+                        break;
+                    }
                     else
                     {
                         Console.Clear();
@@ -66,6 +96,9 @@ namespace Final_Project.Important_Stuff
                         Console.WriteLine("You bought the Iron sword!");
                         Program.adventurer.currentWeaponDamage = ironSword.weaponDamage;
                         Program.adventurer.currentWeaponName = ironSword.weaponName;
+                        Inventory.WeaponsList.Insert(2, ironSword.weaponName);
+                        Inventory.WeaponDamage.Insert(2, ironSword.weaponDamage);
+                        ironSword.isBoughtWeapon = true;
                     }
                     break;
 
@@ -76,6 +109,12 @@ namespace Final_Project.Important_Stuff
                         Console.WriteLine("Sorry but you don't have enough gold to buy the sword.");
                         break;
                     }
+                    else if (platinumSword.isBoughtWeapon == true)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("You already bought this weapon!");
+                        break;
+                    }
                     else
                     {
                         Console.Clear();
@@ -83,6 +122,9 @@ namespace Final_Project.Important_Stuff
                         Console.WriteLine("You bought the Platinum sword!");
                         Program.adventurer.currentWeaponDamage = platinumSword.weaponDamage;
                         Program.adventurer.currentWeaponName = platinumSword.weaponName;
+                        Inventory.WeaponsList.Insert(3,platinumSword.weaponName);
+                        Inventory.WeaponDamage.Insert(3, platinumSword.weaponDamage);
+                        platinumSword.isBoughtWeapon = true;
                     }
                     break;
 
@@ -93,6 +135,12 @@ namespace Final_Project.Important_Stuff
                         Console.WriteLine("Sorry but you don't have enough gold to buy the sword.\n");
                         break;
                     }
+                    else if (titaniumSword.isBoughtWeapon == true)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("You already bought this weapon!");
+                        break;
+                    }
                     else
                     {
                         Console.Clear();
@@ -100,6 +148,9 @@ namespace Final_Project.Important_Stuff
                         Console.WriteLine("You bought the Titanium sword!");
                         Program.adventurer.currentWeaponDamage = titaniumSword.weaponDamage;
                         Program.adventurer.currentWeaponName = titaniumSword.weaponName;
+                        Inventory.WeaponsList.Insert(4, titaniumSword.weaponName);
+                        Inventory.WeaponDamage.Insert(4, titaniumSword.weaponDamage);
+                        titaniumSword.isBoughtWeapon = true;
                     }
                     break;
 
@@ -110,6 +161,12 @@ namespace Final_Project.Important_Stuff
                         Console.WriteLine("Sorry but you don't have enough gold to buy the sword.\n");
                         break;
                     }
+                    else if (amalgamSword.isBoughtWeapon == true)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("You already bought this weapon!");
+                        break;
+                    }
                     else
                     {
                         Console.Clear();
@@ -117,6 +174,9 @@ namespace Final_Project.Important_Stuff
                         Console.WriteLine("You bought the Amalgam's sword!\n");
                         Program.adventurer.currentWeaponDamage = amalgamSword.weaponDamage;
                         Program.adventurer.currentWeaponName = amalgamSword.weaponName;
+                        Inventory.WeaponsList.Insert(5, amalgamSword.weaponName);
+                        Inventory.WeaponDamage.Insert(5, amalgamSword.weaponDamage);
+                        amalgamSword.isBoughtWeapon = true;
                     }
                     break;
 
@@ -127,6 +187,12 @@ namespace Final_Project.Important_Stuff
                         Console.WriteLine("Sorry but you don't have enough gold to buy the sword.\n");
                         break;
                     }
+                    else if (gemSword.isBoughtWeapon == true)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("You already bought this weapon!");
+                        break;
+                    }
                     else
                     {
                         Console.Clear();
@@ -134,6 +200,9 @@ namespace Final_Project.Important_Stuff
                         Console.WriteLine("You bought The Gem Dragon's Bane!\n");
                         Program.adventurer.currentWeaponDamage = gemSword.weaponDamage;
                         Program.adventurer.currentWeaponName = gemSword.weaponName;
+                        Inventory.WeaponsList.Insert(6, gemSword.weaponName);
+                        Inventory.WeaponDamage.Insert(6, gemSword.weaponDamage);
+                        gemSword.isBoughtWeapon = true;
                     }
                     break;
 
@@ -164,15 +233,12 @@ namespace Final_Project.Important_Stuff
         public static void ShopArmor()
         {
             string option;
-            Armor bronzeArmor = new Armor("Bronze Armor", 5, 15);
-            Armor ironArmor = new Armor("Iron Armor", 10, 30);
-            Armor platinumArmor = new Armor("Platinum Armor", 20, 60);
-            Armor titaniumArmor = new Armor("Titanium Armor", 40, 100);
-            Armor amalgamArmor = new Armor("Amalgam's Armor", 100, 400);
-            Armor gemArmor = new Armor("The Gem Dragon's Scales", 400, 1000);
-            Armor godArmor = new Armor("God's Protection", 10000, 50000);
 
         shop:
+            Console.WriteLine("You have ");
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine(Program.adventurer.Gold + " gold!");
+            Console.ResetColor();
             Console.WriteLine("You see several different armors to chose from!\n");
             Console.WriteLine($"Type in the name of the Armor to buy it!\n" +
                 $"\n'Bronze Armor', it costs {bronzeArmor.armorCost} gold and protects you from {bronzeArmor.damageReduction} damage!" +
@@ -186,7 +252,7 @@ namespace Final_Project.Important_Stuff
             option = Console.ReadLine();
             switch (option)
             {
-                case "Bronze Sword":
+                case "Bronze Armor":
                     if (Program.adventurer.Gold < bronzeArmor.armorCost)
                     {
                         Console.Clear();
@@ -198,8 +264,13 @@ namespace Final_Project.Important_Stuff
                         Console.Clear();
                         Program.adventurer.Gold -= bronzeArmor.armorCost;
                         Console.WriteLine("You bought the Bronze armor!");
+
                         Program.adventurer.currentArmorProtection = bronzeArmor.damageReduction;
                         Program.adventurer.currentArmorName = bronzeArmor.armorName;
+
+                        Inventory.ArmorList.Insert(1, Program.adventurer.currentArmorName);
+                        Inventory.ArmorProtection.Insert(1, Program.adventurer.currentArmorProtection);
+                        bronzeArmor.isBoughtArmor = true;
                     }
                     break;
 
@@ -217,6 +288,11 @@ namespace Final_Project.Important_Stuff
                         Console.WriteLine("You bought the Iron armor!");
                         Program.adventurer.currentArmorProtection = ironArmor.damageReduction;
                         Program.adventurer.currentArmorName = ironArmor.armorName;
+
+                        Inventory.ArmorList.Insert(2, Program.adventurer.currentArmorName);
+                        Inventory.ArmorProtection.Insert(2, Program.adventurer.currentArmorProtection);
+                        ironArmor.isBoughtArmor = true;
+
                     }
                     break;
 
@@ -234,6 +310,11 @@ namespace Final_Project.Important_Stuff
                         Console.WriteLine("You bought the Platinum armor!");
                         Program.adventurer.currentArmorProtection = platinumArmor.damageReduction;
                         Program.adventurer.currentArmorName = platinumArmor.armorName;
+
+                        Inventory.ArmorList.Insert(3, Program.adventurer.currentArmorName);
+                        Inventory.ArmorProtection.Insert(3, Program.adventurer.currentArmorProtection);
+                        platinumArmor.isBoughtArmor = true;
+
                     }
                     break;
 
@@ -251,6 +332,11 @@ namespace Final_Project.Important_Stuff
                         Console.WriteLine("You bought the Titanium armor!");
                         Program.adventurer.currentArmorProtection = titaniumArmor.damageReduction;
                         Program.adventurer.currentArmorName = titaniumArmor.armorName;
+
+                        Inventory.ArmorList.Insert(4, Program.adventurer.currentArmorName);
+                        Inventory.ArmorProtection.Insert(4, Program.adventurer.currentArmorProtection);
+                        titaniumArmor.isBoughtArmor = true;
+
                     }
                     break;
 
@@ -268,6 +354,11 @@ namespace Final_Project.Important_Stuff
                         Console.WriteLine("You bought Amalgam's armor!");
                         Program.adventurer.currentArmorProtection = amalgamArmor.damageReduction;
                         Program.adventurer.currentArmorName = amalgamArmor.armorName;
+
+                        Inventory.ArmorList.Insert(5, Program.adventurer.currentArmorName);
+                        Inventory.ArmorProtection.Insert(5, Program.adventurer.currentArmorProtection);
+                        amalgamArmor.isBoughtArmor = true;
+
                     }
                     break;
 
@@ -285,6 +376,11 @@ namespace Final_Project.Important_Stuff
                         Console.WriteLine("You bought The Gem Dragon's Scales!");
                         Program.adventurer.currentArmorProtection = gemArmor.damageReduction;
                         Program.adventurer.currentArmorName = gemArmor.armorName;
+
+                        Inventory.ArmorList.Insert(6, Program.adventurer.currentArmorName);
+                        Inventory.ArmorProtection.Insert(6, Program.adventurer.currentArmorProtection);
+                        gemArmor.isBoughtArmor = true;
+
                     }
                     break;
 

@@ -19,7 +19,9 @@ namespace Final_Project.Monsters
 
         public int monsterExp;
         public int monsterDrop;
+
         public string monsterDropName;
+        public static int monsterDropSell = 100;
         public int monsterGold;
 
         public bool playerStatusEffect;
