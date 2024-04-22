@@ -7,25 +7,32 @@ using System.Threading.Tasks;
 
 namespace Final_Project.Areas
 {
-    internal class Desert : Area
+    internal class Cave : Area
     {
 
         internal override string CreateDescription() =>
-@"You decided to go into the forest!
-In the forest, Goblins, Slimes and Wolves are abundent!
+@"You decided to go towards the cave!
+The sounds of growls, the clacking of bones and the scuttling of bugs fill your ears as you approach!
+
+You can 'Continue' to go deeper!
+You can 'Leave' and fight another day!
+Or you can 'Learn' what the weaknesses and resistences of the monsters you've encountered are!
 ";
 
         internal override void ReceiveChoice(string choice)
         {
             switch (choice)
             {
-                case "look":
+                case "continue":
                     Console.WriteLine("You decided to look around!");
                     Fighting.Fight();
                     break;
-                case "escape":
+                case "leave":
                     Console.WriteLine("The chest opens and you get a key.");
                     Game.Transition<Menu>();
+                    break;
+                case "learn":
+                    Learning.Learn();
                     break;
                 default:
                     Console.WriteLine("Invalid command.");

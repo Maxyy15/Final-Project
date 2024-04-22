@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Final_Project.Areas
 {
-    internal class Forest : Area
+    internal class Sea : Area
     {
 
         internal override string CreateDescription() =>
@@ -15,12 +15,14 @@ namespace Final_Project.Areas
 You see a sign warning you about the increase in monsters!
 Specifically Goblins, Wolves and Slimes!
 
-Please press any key to continue!
+You can 'Continue' to go deeper!
+You can 'Leave' and fight another day!
+Or you can 'Learn' what the weaknesses and resistences of the monsters you've encountered are!
 ";
 
         internal override void ReceiveChoice(string choice)
         {
-            choice = "continue";
+            //choice = "continue";
             switch (choice)
             {
                 case "continue":
@@ -31,6 +33,9 @@ Please press any key to continue!
                 case "leave":
                     Console.WriteLine("You decide to go back to safety!");
                     Game.Transition<Menu>();
+                    break;
+                case "learn":
+                    Learning.Learn();
                     break;
                 default:
                     Console.WriteLine("Invalid command.");

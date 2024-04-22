@@ -50,12 +50,13 @@ namespace Final_Project
             game.Add(new Home());
             game.Add(new Menu());
             game.Add(new Shop());
-
             game.Add(new AreaList());
+
             game.Add(new Forest());
             game.Add(new Cave());
             game.Add(new Desert());
-            game.Add(new Ocean());
+            game.Add(new Sea());
+            game.Add(new TiamatsLair());
 
             while (!game.IsGameOver())
             {

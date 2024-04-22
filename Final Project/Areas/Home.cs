@@ -23,12 +23,14 @@ Or 'Leave' and start your day adventuring!
 
         internal override void ReceiveChoice(string choice)
         {
+
             switch (choice)
             {
+
                 case "rest":
                     Console.WriteLine("You decided to rest!");
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.Write("\n HP ");
+                    Console.Write("\nHP ");
 
                     Console.ResetColor();
                     Console.Write("and");
@@ -37,10 +39,11 @@ Or 'Leave' and start your day adventuring!
                     Console.Write(" Mana ");
 
                     Console.ResetColor();
-                    Console.WriteLine("are fully restored!");
+                    Console.WriteLine("is fully restored!");
 
                     Program.adventurer.HP = Program.maxHP; 
                     Program.adventurer.Mana = Program.maxMana;
+
                     break;
 
                 case "inventory":
@@ -57,6 +60,33 @@ Or 'Leave' and start your day adventuring!
 
                 case "leave":
                     Console.WriteLine("You decided to go back outside!");
+
+                    Console.Write("You currently have ");
+                    Console.ForegroundColor = ConsoleColor.DarkYellow;
+                    Console.Write(Program.adventurer.Gold + " gold");
+                    Console.ResetColor();
+                    Console.WriteLine("!");
+
+                    Console.Write("Your current ");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Write("HP ");
+                    Console.ResetColor();
+                    Console.Write("is ");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Write($"{Program.adventurer.HP}");
+                    Console.ResetColor();
+                    Console.WriteLine("!");
+
+                    Console.Write("Your current ");
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.Write("Mana ");
+                    Console.ResetColor();
+                    Console.Write("is ");
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.Write($"{Program.adventurer.Mana}");
+                    Console.ResetColor();
+                    Console.WriteLine("!");
+
                     Game.Transition<Menu>();
                     break;
 

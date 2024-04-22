@@ -33,7 +33,7 @@ namespace Final_Project.Important_Stuff
         shop:
             Console.WriteLine("You have ");
             Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine(Program.adventurer.Gold + " gold!");
+            Console.Write(Program.adventurer.Gold + " gold!");
             Console.ResetColor();
             Console.WriteLine("You see several different weapons to chose from!\n");
             Console.WriteLine($"Type the name to buy the weapon!\n" +
@@ -237,7 +237,7 @@ namespace Final_Project.Important_Stuff
         shop:
             Console.WriteLine("You have ");
             Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine(Program.adventurer.Gold + " gold!");
+            Console.Write(Program.adventurer.Gold + " gold!");
             Console.ResetColor();
             Console.WriteLine("You see several different armors to chose from!\n");
             Console.WriteLine($"Type in the name of the Armor to buy it!\n" +

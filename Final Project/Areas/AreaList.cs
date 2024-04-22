@@ -17,7 +17,7 @@ Keep in mind, the further down the list the harder the monsters!
 'Desert' Level 11-15
 'Ocean' Level 16-20
 
-'Tiamat's Lair'
+'Tiamat's Lair' ???-???
 ";
         internal override void ReceiveChoice(string choice)
         {
@@ -30,29 +30,21 @@ Keep in mind, the further down the list the harder the monsters!
                     break;
 
                 case "cave":
-
-                    Console.WriteLine("You decided to go to the cave!");
                     Program.currentArea = "cave";
                     Game.Transition<Cave>();
-
                     break;
 
                 case "desert":
-
-                    Console.WriteLine("You decided to go to the desert!");
                     Program.currentArea = "desert";
                     break;
 
-                case "ocean":
-
-                    Console.WriteLine("You decided to go to the ocean!");
-                    Program.currentArea = "ocean";
+                case "sea":
+                    Program.currentArea = "sea";
                     break;
 
                 case "tiamat's lair":
-
-                    Console.WriteLine("You decided to go to the ocean!");
                     Program.currentArea = "tiamat's lair";
+
                     break;
 
                 default:
