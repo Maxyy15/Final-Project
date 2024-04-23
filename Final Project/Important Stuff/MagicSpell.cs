@@ -166,11 +166,11 @@ namespace Final_Project.Important_Stuff
 
                 case "water":
                     {
-
+                        retry:
                         Magic iceBolt = new Magic("Ice Bolt", "Water", 10, 3);
 
                         Console.WriteLine($"'Ice Bolt', it does {iceBolt.magicDamage} damage and it costs {iceBolt.magicCost} Mana\n");
-                        string spellChoice = Console.ReadLine();
+                        string spellChoice = Console.ReadLine().ToLower();
                         switch (spellChoice)
                         {
                             case "ice bolt":
@@ -184,6 +184,7 @@ namespace Final_Project.Important_Stuff
                                     }
                                     else
                                     {
+                                        Console.Clear();
                                         Console.WriteLine("You decided to use Ice Bolt!");
                                         Program.adventurer.currentMagicDamage = iceBolt.magicDamage;
                                         Program.adventurer.currentMagicSpell = iceBolt.magicName;
@@ -201,6 +202,12 @@ namespace Final_Project.Important_Stuff
                                     Program.adventurer.Big = false;
                                 }
                                 break;
+                            default:
+                                {
+                                    Console.Clear();
+                                    Console.WriteLine("Please enter a valid option!");
+                                    goto retry;
+                                }
 
                         }
                     }
@@ -208,10 +215,11 @@ namespace Final_Project.Important_Stuff
 
                 case "air":
                     {
+                    retry:
                         Magic windBlade = new Magic("Wind Blade", "Wind", 20, 8);
 
                         Console.WriteLine($"'Wind Blade', it does {windBlade.magicDamage} damage and it costs {windBlade.magicCost} Mana\n");
-                        string spellChoice = Console.ReadLine();
+                        string spellChoice = Console.ReadLine().ToLower();
                         switch (spellChoice)
                         {
                             case "wind blade":
@@ -242,13 +250,19 @@ namespace Final_Project.Important_Stuff
                                     Program.adventurer.Big = false;
                                 }
                                 break;
-
+                            default:
+                                {
+                                    Console.Clear();
+                                    Console.WriteLine("Please enter a valid option!");
+                                    goto retry;
+                                }
                         }
                     }
                     break;
 
                 case "earth":
                     {
+                    retry:
                         string spellChoice = Console.ReadLine().ToLower();
                         switch (spellChoice)
                         {
@@ -260,12 +274,19 @@ namespace Final_Project.Important_Stuff
                                     Program.adventurer.Big = false;
                                 }
                                 break;
+                            default:
+                                {
+                                    Console.Clear();
+                                    Console.WriteLine("Please enter a valid option!");
+                                    goto retry;
+                                }
                         }
                     }
                     break;
 
                 case "poison":
                     {
+                    retry:
                         Magic poisonStrike = new Magic("Poison Strike", "Poison", 4, 12);
 
                         Console.WriteLine($"'Poison Strike', it does {poisonStrike.magicDamage} damage and it costs {poisonStrike.magicCost} Mana! It can also poison the target for 7 extra damage!\n");
@@ -302,12 +323,19 @@ namespace Final_Project.Important_Stuff
                                     Program.adventurer.Big = false;
                                 }
                                 break;
+                            default:
+                                {
+                                    Console.Clear();
+                                    Console.WriteLine("Please enter a valid option!");
+                                    goto retry;
+                                }
                         }
                     }
                     break;
 
                 case "holy":
                     {
+                    retry:
                         string spellChoice = Console.ReadLine().ToLower();
                         switch (spellChoice)
                         {
@@ -318,12 +346,19 @@ namespace Final_Project.Important_Stuff
                                     Program.adventurer.Big = false;
                                 }
                                 break;
+                            default:
+                                {
+                                    Console.Clear();
+                                    Console.WriteLine("Please enter a valid option!");
+                                    goto retry;
+                                }
                         }
                     }
                     break;
 
                 case "dark":
                     {
+                    retry:
                         string spellChoice = Console.ReadLine();
                         switch (spellChoice)
                         {
@@ -334,6 +369,13 @@ namespace Final_Project.Important_Stuff
                                     Program.adventurer.Big = false;
                                 }
                                 break;
+
+                            default:
+                                {
+                                    Console.Clear();
+                                    Console.WriteLine("Please enter a valid option!");
+                                    goto retry;
+                                }
                         }
                     }
                     break;

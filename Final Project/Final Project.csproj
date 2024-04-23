@@ -59,7 +59,9 @@
     <Compile Include="Important Stuff\Initializing.cs" />
     <Compile Include="Important Stuff\Learning.cs" />
     <Compile Include="Important Stuff\Level_Up.cs" />
+    <Compile Include="Important Stuff\LoadData.cs" />
     <Compile Include="Important Stuff\MagicSpell.cs" />
+    <Compile Include="Important Stuff\SaveData.cs" />
     <Compile Include="Important Stuff\Selling.cs" />
     <Compile Include="Monsters\Cave\Kobold.cs" />
     <Compile Include="Monsters\Desert\Gnoll.cs" />
