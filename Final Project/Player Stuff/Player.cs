@@ -10,8 +10,8 @@ namespace Final_Project
     {
         public string name;
         public int HP = 100;
-        public int Mana = 10;
-        public int Gold = 50000;
+        public int Mana = 50;
+        public int Gold = 0;
         public int Exp = 0;
         //public int LevelUpCost = 30;
         public int Level = 1;
@@ -27,8 +27,10 @@ namespace Final_Project
         public string currentMagicSpell;
         public string currentMagicType;
         public string currentMagicStatus;
+
         public int currentMagicDamage;
         public int currentMagicCost;
+        public int magicHitChance;
         public void Introduction()
         {
             Console.Write("Hello {0}!\nYou're an adventurer on the quest to stop Tiamat's from destroying the world!\n" +

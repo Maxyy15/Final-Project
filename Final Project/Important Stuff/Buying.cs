@@ -9,6 +9,7 @@ namespace Final_Project.Important_Stuff
 {
     internal class Buying
     {
+        //Hellreaver, Starshatterer, Guardian's Deflector, Early Retirement, Mournblade, King's Legacy
         public static Weapons bronzeSword = new Weapons("Bronze Sword", 10, 50, false);
         public static Weapons ironSword = new Weapons("Iron Sword", 15, 75, false);
         public static Weapons silverSword = new Weapons("Silver Sword", 35, 75, false);
@@ -19,7 +20,7 @@ namespace Final_Project.Important_Stuff
 
         public static Weapons godSword = new Weapons("God's Wrath", 10000, 5000, false);
 
-
+        //Azure Protector, Shadowguard, Nightshade Armor, Malar's Forest Mail, Wyvernguard Armor, Sunfire Guard, Wraithshroud Mail
         public static Armor bronzeArmor = new Armor("Bronze Armor", 5, 75, false);
         public static Armor ironArmor = new Armor("Iron Armor", 15, 150, false);
         public static Armor silverArmor = new Armor("Silver Sword", 35, 250, false);

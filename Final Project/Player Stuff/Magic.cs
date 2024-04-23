@@ -14,6 +14,7 @@ namespace Final_Project.Player_Stuff
         public int magicDamage;
         public int magicCost;
         public int magicDuration = 0;
+        public int hitChance;
 
         public Magic(string magicName, string magicType, int magicDamage, int magicCost)
         {
