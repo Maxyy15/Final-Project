@@ -86,7 +86,7 @@ namespace Final_Project.Important_Stuff
                         look:
                             if (Program.currentArea == "forest")
                             {
-                                int rn = rnd.Next(0, 18);
+                                int rn = rnd.Next(0, 17);
 
                                 if (rn >= 0 && rn <= 4)
                                 {
@@ -153,7 +153,7 @@ namespace Final_Project.Important_Stuff
                             else if (Program.currentArea == "cave")
                             {
 
-                                int rn = rnd.Next(0, 20);
+                                int rn = rnd.Next(0, 19);
 
                                 if (rn >= 0 && rn <= 3)
                                 {
@@ -222,7 +222,7 @@ namespace Final_Project.Important_Stuff
 
                             else if (Program.currentArea == "desert")
                             {
-                                int rn = rnd.Next(0, 20);
+                                int rn = rnd.Next(0, 19);
 
                                 if (rn >= 0 && rn <= 3)
                                 {
@@ -297,7 +297,7 @@ namespace Final_Project.Important_Stuff
 
                             else if (Program.currentArea == "sea")
                             {
-                                int rn = rnd.Next(0, 22);
+                                int rn = rnd.Next(0, 21);
 
                                 if (rn >= 0 && rn <= 3)
                                 {

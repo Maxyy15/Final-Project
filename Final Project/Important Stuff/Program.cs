@@ -35,6 +35,8 @@ namespace Final_Project
                 }
                 if(ans == "no") 
                 {
+                    LoadData.CloseFileStream();
+
                     File.Delete(Home.SaveFile);
                     goto okiedokie;
                 }

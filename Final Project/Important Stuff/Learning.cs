@@ -14,7 +14,7 @@ namespace Final_Project.Important_Stuff
             gnoll = false, manticore = false, mummy = false, purpleworm = false, roc = false, 
             harpy = false, hydra = false, kraken = false, merfolk = false, pirate = false, sahuagin = false, 
             tiamat = false;
-
+       
         public static void Learn()
         {
             if (Program.currentArea == "forest")
@@ -57,5 +57,6 @@ namespace Final_Project.Important_Stuff
 
             }
         }
+
     }
 }

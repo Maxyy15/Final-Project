@@ -41,6 +41,7 @@ namespace Final_Project.Player_Stuff
             Console.WriteLine("You can swap out your equipment here!\nYour 'Armor' and 'Weapons' are laid out neatly in front of you!");
             int x = 0;
             string choice = Console.ReadLine().ToLower();
+            string choice1;
 
             switch(choice)
             {
@@ -82,7 +83,7 @@ namespace Final_Project.Player_Stuff
                     {
                         Console.Clear();
                         Console.WriteLine("Please select a valid armor!");
-                        goto tryagain2;
+                        goto tryagain1;
                     }
                     Console.Clear();
 
@@ -107,9 +108,9 @@ namespace Final_Project.Player_Stuff
                     }
 
                     Console.WriteLine("Please select your weapon!");
-                    choice = Console.ReadLine();
+                    choice1 = Console.ReadLine();
                     
-                    if(choice == "")
+                    if(choice1 == "")
                     {
                         Console.Clear();
                         Console.WriteLine("Please select a valid weapon!");
