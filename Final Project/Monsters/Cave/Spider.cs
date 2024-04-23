@@ -8,8 +8,6 @@ namespace Final_Project.Monsters
 {
     internal class Spider : Monster
     {
-        public bool doesStatusEffect;
-        public string statusEffectName;
         public Spider(string name, int hp, int damage, int exp, int drop)
         {
             this.monsterName = name;

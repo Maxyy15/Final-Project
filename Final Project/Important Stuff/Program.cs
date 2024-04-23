@@ -19,6 +19,7 @@ namespace Final_Project
         public static int levelUpCost = 30, maxHP = 100, maxMana = 50, playerStatusCount, monstersStatusCount;
         public static string currentArea;
         public static bool cast = false;
+        public static bool die = false;
 
         static void Main(string[] args)
         {
@@ -67,8 +68,18 @@ namespace Final_Project
                 game.ReceiveChoice(choice);
             }
 
-                Console.WriteLine("END");
-                Console.ReadLine();
+            if (die == true)
+            {
+                Console.WriteLine("You failed to save the world from Tiamat\nAs the light begins to leave your eyes, you could only wish that you were just a little stronger.\n" +
+                    "Maybe in your next life you could save everyone.\n");
+            }
+            else
+            {
+                Console.WriteLine("You saved the world from Tiamat!\nTheir evil shall no longer corrupt the inhabitants of this world!\nAlthough many may not know what you" +
+                    " have gone through to get the this point, that doesn't matter\nYou won.");
+            }
+            Console.WriteLine("END");
+            Console.ReadLine();
         }
     }
 }

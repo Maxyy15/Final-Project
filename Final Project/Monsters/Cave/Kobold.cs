@@ -6,16 +6,15 @@ using System.Threading.Tasks;
 
 namespace Final_Project.Monsters
 {
-    internal class Mimic : Monster
+    internal class Kobold : Monster
     {
-        public int monsterGold;
-        public Mimic(string name, int hp, int damage, int exp, int gold)
+        public Kobold (string name, int hp, int damage, int exp, int drop)
         {
             this.monsterName = name;
             this.monsterHP = hp;
             this.monsterDamage = damage;
             this.monsterExp = exp;
-            this.monsterGold = gold;
+            this.monsterDrop = drop;
         }
     }
 }
