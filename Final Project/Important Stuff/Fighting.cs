@@ -5,6 +5,7 @@ using Final_Project.Player_Stuff;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -95,7 +96,7 @@ namespace Final_Project.Important_Stuff
                                     goblin.monsterDropName = "Goblin Teeth";
 
                                     resistanceArr[0] = "Water";
-                                    weaknessArr[0] = "Fire";
+                                    weaknessArr[0] = "Dark";
                                     weaknessArr[1] = "Poison";
 
                                     Learning.goblin = true;
@@ -110,7 +111,7 @@ namespace Final_Project.Important_Stuff
 
                                     resistanceArr[0] = "Air";
                                     resistanceArr[1] = "Earth";
-                                    weaknessArr[0] = "Fire";
+                                    weaknessArr[0] = "Poison";
 
                                     Learning.wolf = true;
 
@@ -127,7 +128,9 @@ namespace Final_Project.Important_Stuff
 
 
                                     resistanceArr[0] = "Fire";
-                                    weaknessArr[0] = "Air";
+                                    weaknessArr[0] = "Water";
+                                    weaknessArr[0] = "Earth";
+
 
                                     Learning.slime = true;
 
@@ -160,6 +163,7 @@ namespace Final_Project.Important_Stuff
                                     Mimic mimic = new Mimic("Mimic", 40, 18, rnd.Next(15, 40), rnd.Next(20, 80));
 
                                     resistanceArr[0] = "Water";
+                                    resistanceArr[1] = "Holy";
                                     weaknessArr[0] = "Fire";
 
                                     monster = mimic;
@@ -186,7 +190,8 @@ namespace Final_Project.Important_Stuff
                                     spider.statusEffectName = "Poison";
 
                                     resistanceArr[0] = "Poison";
-                                    weaknessArr[0] = "Holy";
+                                    weaknessArr[0] = "Water";
+                                    weaknessArr[1] = "Earth";
 
                                     monster = spider;
                                 }
@@ -201,6 +206,7 @@ namespace Final_Project.Important_Stuff
                                     troll.maxMonsterHP = troll.monsterHP;
 
                                     resistanceArr[0] = "Air";
+                                    resistanceArr[1] = "Earth";
                                     weaknessArr[0] = "Fire";
                                     weaknessArr[1] = "Poison";
 
@@ -213,7 +219,7 @@ namespace Final_Project.Important_Stuff
                                     kobold.monsterDropName = "Kobold Eyes";
 
                                     resistanceArr[0] = "Poison";
-                                    weaknessArr[0] = "Fire";
+                                    weaknessArr[0] = "Earth";
                                     weaknessArr[1] = "Holy";
 
                                     monster = kobold;
@@ -235,7 +241,7 @@ namespace Final_Project.Important_Stuff
 
                                     resistanceArr[0] = "Water";
                                     resistanceArr[1] = "Dark";
-                                    weaknessArr[0] = "Fire";
+                                    weaknessArr[0] = "Holy";
                                     weaknessArr[1] = "Air";
 
                                     monster = manticore;
@@ -261,6 +267,7 @@ namespace Final_Project.Important_Stuff
 
                                     resistanceArr[0] = "Air";
                                     resistanceArr[1] = "Earth";
+                                    resistanceArr[2] = "Holy";
                                     weaknessArr[0] = "Poison";
                                     weaknessArr[1] = "Dark";
                                     
@@ -319,12 +326,14 @@ namespace Final_Project.Important_Stuff
 
                                     sahuagin.monsterDropName = "Sahuagin Fins";
 
+                                    monster.doesStatusEffect = true;
+                                    monster.statusEffectName = "Poison";
+
                                     resistanceArr[0] = "Water";
                                     resistanceArr[1] = "Fire";
                                     resistanceArr[2] = "Poison";
                                     weaknessArr[0] = "Air";
                                     weaknessArr[1] = "Holy";
-                                    weaknessArr[2] = "Earth";
 
                                     monster = sahuagin;
                                 }
@@ -355,7 +364,7 @@ namespace Final_Project.Important_Stuff
                                     resistanceArr[1] = "Poison";
                                     resistanceArr[2] = "Dark";
                                     weaknessArr[0] = "Fire";
-                                    weaknessArr[1] = "Earth";
+                                    weaknessArr[1] = "Holy";
 
                                     monster = hydra;
                                 }
@@ -379,7 +388,7 @@ namespace Final_Project.Important_Stuff
                                     resistanceArr[0] = "Poison";
                                     resistanceArr[1] = "Water";
                                     resistanceArr[2] = "Fire";
-                                    weaknessArr[0] = "Earth";
+                                    weaknessArr[0] = "Dark";
                                     weaknessArr[1] = "Air";
 
                                     monster = kraken;
@@ -395,7 +404,7 @@ namespace Final_Project.Important_Stuff
                                 monster.healAmount = 50;
 
                                 monster.doesStatusEffect = true;
-
+                                monster.statusEffectName = "Poison";
 
                                 resistanceArr[0] = "Fire";
                                 resistanceArr[1] = "Water";
@@ -460,76 +469,133 @@ namespace Final_Project.Important_Stuff
                                 option = Console.ReadLine().ToLower();
                                 if (option == "weapon")
                                 {
-                                    if (resistanceArr.Any(resist => Program.adventurer.currentWeaponName == resist))
+                                    Console.Clear();
+                                    int hitChance = rnd.Next(0, 101);
+
+                                    if(hitChance > 20)
                                     {
-                                        int damageReduction = (Program.adventurer.currentWeaponDamage / 2);
+                                        if (resistanceArr.Any(resist => Program.adventurer.currentWeaponName == resist))
+                                        {
+                                            int damageReduction = (Program.adventurer.currentWeaponDamage / 2);
 
-                                        monster.monsterHP -= damageReduction;
+                                            monster.monsterHP -= damageReduction;
 
-                                        Console.WriteLine($"You attacked the {monster.monsterName} for {damageReduction}!\n");
-                                    }
-                                    else if (weaknessArr.Any(weakness => Program.adventurer.currentWeaponName == weakness))
-                                    {
-                                        int damageIncrease = (Program.adventurer.currentWeaponDamage * 2);
+                                            Console.WriteLine($"You attacked the {monster.monsterName} for {damageReduction}!\n");
+                                        }
+                                        else if (weaknessArr.Any(weakness => Program.adventurer.currentWeaponName == weakness))
+                                        {
+                                            int damageIncrease = (Program.adventurer.currentWeaponDamage * 2);
 
-                                        monster.monsterHP -= damageIncrease;
+                                            monster.monsterHP -= damageIncrease;
 
-                                        Console.WriteLine($"You attacked the {monster.monsterName} for {damageIncrease}!\n");
+                                            Console.WriteLine($"You attacked the {monster.monsterName} for {damageIncrease}!\n");
+                                        }
+                                        else
+                                        {
+                                            monster.monsterHP -= Program.adventurer.currentWeaponDamage;
+                                            Console.WriteLine($"You attacked the {monster.monsterName} for {Program.adventurer.currentWeaponDamage}!\n");
+                                        }
                                     }
                                     else
                                     {
-                                        monster.monsterHP -= Program.adventurer.currentWeaponDamage;
-                                        Console.WriteLine($"You attacked the {monster.monsterName} for {Program.adventurer.currentWeaponDamage}!\n");
+                                        int dialogue = rnd.Next(0, 5);
+                                        switch(dialogue)
+                                        {
+                                            case 0:
+                                                Console.WriteLine("You swung your sword and just barely missed your opponent!\n");
+                                                break;
+                                            case 1:
+                                                Console.WriteLine($"Your opponent moved out of the way just as the sword was about to collide!\n");
+                                                break;
+                                            case 2:
+                                                Console.WriteLine("You tripped as you swung your sword, barely missing your opponent!\n");
+                                                break;
+                                            case 3:
+                                                Console.WriteLine("As you swung your sword something got in your eyes, making you miss!\n");
+                                                break;
+                                            case 4:
+                                                Console.WriteLine("Just as you're about to plunge your sword into your opponent you sneezed!\n");
+                                                break;
+                                        }
+                                        Console.WriteLine("Your turn has been skipped!");
                                     }
                                 }
                                 else if (option == "magic")
                                 {
                                     MagicSpell.MagicSpells();
-                                    if (Program.adventurer.Mana < Program.adventurer.currentMagicCost)
-                                    {
-                                        goto choice1;
-                                    }
-                                    else if (Program.adventurer.Big == false)
-                                    {
-                                        Console.WriteLine("You decided not to cast a spell!\n");
-                                        goto choice1;
-                                    }
 
-                                    else if (Program.cast == false)
+                                    if(Program.adventurer.magicHitChance > 10)
                                     {
-                                        Program.adventurer.currentMagicDamage = 0;
-                                        Program.adventurer.currentMagicSpell = "";
-                                        Program.adventurer.currentMagicType = "";
-                                        Program.adventurer.currentMagicCost = 0;
-                                        goto choice1;
+                                        if (Program.adventurer.Mana < Program.adventurer.currentMagicCost)
+                                        {
+                                            goto choice1;
+                                        }
+                                        else if (Program.adventurer.Big == false)
+                                        {
+                                            Console.WriteLine("You decided not to cast a spell!\n");
+                                            goto choice1;
+                                        }
+
+                                        else if (Program.cast == false)
+                                        {
+                                            Program.adventurer.currentMagicDamage = 0;
+                                            Program.adventurer.currentMagicSpell = "";
+                                            Program.adventurer.currentMagicType = "";
+                                            Program.adventurer.currentMagicCost = 0;
+                                            goto choice1;
+                                        }
+                                        else
+                                        {
+                                            if (resistanceArr.Any(resist => Program.adventurer.currentMagicType == resist))
+                                            {
+                                                int damageReduction = (Program.adventurer.currentMagicDamage / 2);
+
+                                                monster.monsterHP -= damageReduction;
+
+                                                Console.WriteLine($"You cast {Program.adventurer.currentMagicSpell}!\nYou hit the {monster.monsterName} for {damageReduction}!\n");
+                                            }
+
+                                            else if (weaknessArr.Any(weakness => Program.adventurer.currentMagicType == weakness))
+                                            {
+                                                int damageIncrease = (Program.adventurer.currentMagicDamage * 2);
+
+                                                monster.monsterHP -= damageIncrease;
+
+                                                Console.WriteLine($"You cast {Program.adventurer.currentMagicSpell}!\nYou hit the {monster.monsterName} for {damageIncrease}!\n");
+                                            }
+
+                                            else if (Program.cast == true)
+                                            {
+                                                monster.monsterHP -= Program.adventurer.currentMagicDamage;
+                                                Console.WriteLine($"You cast {Program.adventurer.currentMagicSpell}!" +
+                                                    $"\nYou hit the {monster.monsterName} for {Program.adventurer.currentMagicDamage}!\n");
+                                            }
+                                        }
                                     }
                                     else
                                     {
-                                        if (resistanceArr.Any(resist => Program.adventurer.currentMagicType == resist))
+                                        int dialogue = rnd.Next(0, 5);
+                                        switch (dialogue)
                                         {
-                                            int damageReduction = (Program.adventurer.currentMagicDamage / 2);
-
-                                            monster.monsterHP -= damageReduction;
-
-                                            Console.WriteLine($"You cast {Program.adventurer.currentMagicSpell}!\nYou hit the {monster.monsterName} for {damageReduction}!\n");
+                                            case 0:
+                                                Console.WriteLine("As you gather your mana to cast your spell, it suddenly dissipates!\n");
+                                                break;
+                                            case 1:
+                                                Console.WriteLine("Your body glows with the power of your spell but as you cast it, you sneeze, missing your target!\n");
+                                                break;
+                                            case 2:
+                                                Console.WriteLine("You aim your spell perfectly but it launches just a moment too late, allowing your opponent to dodge!\n");
+                                                break;
+                                            case 3:
+                                                Console.WriteLine("The air around you grows colder as you prepare to launch your spell, making you shiver uncontrollably!\n");
+                                                break;
+                                            case 4:
+                                                Console.WriteLine("Just as the spell is about to collide with your opponent, it falls flat and dissapates!\n");
+                                                break;
                                         }
-
-                                        else if (weaknessArr.Any(weakness => Program.adventurer.currentMagicType == weakness))
-                                        {
-                                            int damageIncrease = (Program.adventurer.currentMagicDamage * 2);
-
-                                            monster.monsterHP -= damageIncrease;
-
-                                            Console.WriteLine($"You cast {Program.adventurer.currentMagicSpell}!\nYou hit the {monster.monsterName} for {damageIncrease}!\n");
-                                        }
-
-                                        else if (Program.cast == true)
-                                        {
-                                            monster.monsterHP -= Program.adventurer.currentMagicDamage;
-                                            Console.WriteLine($"You cast {Program.adventurer.currentMagicSpell}!" +
-                                                $"\nYou hit the {monster.monsterName} for {Program.adventurer.currentMagicDamage}!\n");
-                                        }
+                                        Console.WriteLine("Your turn has been skipped!");
                                     }
+
                                 }
                                 else
                                 {
@@ -595,7 +661,6 @@ namespace Final_Project.Important_Stuff
                                         resistanceArr[i] = "";
                                         weaknessArr[i] = "";
                                     }
-
 
                                 tryagain1:
                                     Console.WriteLine("Do you wish to fight again? 'Yes' or 'No'");
@@ -736,17 +801,44 @@ namespace Final_Project.Important_Stuff
                                                 int poisonChance = 0;
                                                 if (monster.monsterName == "Spider")
                                                 {
-                                                    poisonChance = rnd.Next(0, 11);
+                                                    poisonChance = rnd.Next(0, 16);
                                                 }
                                                 else if (monster.monsterName == "Manticore")
                                                 {
-                                                    poisonChance = rnd.Next(0, 6);
+                                                    poisonChance = rnd.Next(0, 11);
                                                 }
-                                                
-                                                if (poisonChance >= 0 && poisonChance <= 1)
+                                                else if (monster.monsterName == "Sahuagin")
                                                 {
-                                                    Console.WriteLine("You have been poisoned!\n");
-                                                    Program.monstersStatusCount = 3;
+                                                    poisonChance = rnd.Next(0, 8);
+                                                }
+                                                else if (monster.monsterName == "Tiamat")
+                                                {
+                                                    poisonChance = rnd.Next(0, 5);
+                                                }
+
+                                                if (poisonChance == 1)
+                                                {
+                                                    if (monster.monsterName == "Spider")
+                                                    {
+                                                        Console.WriteLine("You have been poisoned!\n");
+                                                        Program.monstersStatusCount = 2;
+                                                    }
+                                                    else if (monster.monsterName == "Manticore")
+                                                    {
+                                                        Console.WriteLine("You have been poisoned!\n");
+                                                        Program.monstersStatusCount = 4;
+                                                    }
+                                                    else if (monster.monsterName == "Sahuagin")
+                                                    {
+                                                        Console.WriteLine("You have been poisoned!\n");
+                                                        Program.monstersStatusCount = 6;
+                                                    }
+                                                    else if (monster.monsterName == "Tiamat")
+                                                    {
+                                                        Console.WriteLine("You have been poisoned!\n");
+                                                        Program.monstersStatusCount = 8;
+                                                    }
+                                                    
                                                 }
 
                                                 if (Program.monstersStatusCount != 0)
