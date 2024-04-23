@@ -10,14 +10,13 @@ namespace Final_Project.Areas
     {
         internal override string CreateDescription() =>
 @"You decided to explore!
-Chose from these areas! 
-Keep in mind, the further down the list the harder the monsters!
-'Forest' - Level 1-5
-'Cave' Level 6-10
-'Desert' Level 11-15
-'Ocean' Level 16-20
+Chose from these areas, but be careful choosing where you go, you may not be strong enough to fight the monsters in certain areas.
 
-'Tiamat's Lair' ???-???
+'Forest' - Recommended Level 1-5
+'Cave' - Recommended Level 6-10
+'Desert' - Recommended Level 11-15
+'Sea' - Recommended Level 16-20
+'Tiamat's Lair' - Recommended Level ???-???
 ";
         internal override void ReceiveChoice(string choice)
         {
@@ -36,15 +35,17 @@ Keep in mind, the further down the list the harder the monsters!
 
                 case "desert":
                     Program.currentArea = "desert";
+                    Game.Transition<Desert>();
                     break;
 
                 case "sea":
                     Program.currentArea = "sea";
+                    Game.Transition<Sea>();
                     break;
 
                 case "tiamat's lair":
                     Program.currentArea = "tiamat's lair";
-
+                    Game.Transition<TiamatsLair>();
                     break;
 
                 default:

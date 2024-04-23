@@ -10,11 +10,12 @@ namespace Final_Project.Areas
     internal class Shop : Area
     {
         internal override string CreateDescription() =>
-@"You've arrived at the shop!
-There are two rooms to choose from!
-One room is filled with 'Armor' and the other is filled with 'Weapons'!
-You can 'Sell' all the drops you've collected from monsters!
-You can also 'Leave' when you're all done! 
+@"You've arrived at the shop! 
+The shop owner smiles at you, happy to know that their gifts helped you get started.
+
+One room is filled with 'Armor' and the other is filled with 'Weapons'.
+You can 'Sell' all the drops you've collected from monsters.
+You can also 'Leave' when you're all done.
 ";
 
 
@@ -22,7 +23,6 @@ You can also 'Leave' when you're all done!
         {
             switch (choice)
             {
-
                 case "armor":
                     Console.WriteLine("You chose to go check out the armor!");
                     Buying.ShopArmor();

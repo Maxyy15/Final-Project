@@ -9,21 +9,25 @@ namespace Final_Project.Important_Stuff
 {
     internal class Buying
     {
-        public static Weapons bronzeSword = new Weapons("Bronze Sword", 10, 5, false);
-        public static Weapons ironSword = new Weapons("Iron Sword", 25, 15, false);
-        public static Weapons platinumSword = new Weapons("Platinum Sword", 30, 20, false);
-        public static Weapons titaniumSword = new Weapons("Titanium Sword", 50, 35, false);
-        public static Weapons amalgamSword = new Weapons("Amalgam's Sword", 100, 70, false);
-        public static Weapons gemSword = new Weapons("The Gem Dragon's Bane", 500, 355, false);
+        public static Weapons bronzeSword = new Weapons("Bronze Sword", 10, 50, false);
+        public static Weapons ironSword = new Weapons("Iron Sword", 15, 75, false);
+        public static Weapons silverSword = new Weapons("Silver Sword", 35, 75, false);
+        public static Weapons platinumSword = new Weapons("Platinum Sword", 55, 125, false);
+        public static Weapons titaniumSword = new Weapons("Titanium Sword", 100, 200, false);
+        public static Weapons amalgamSword = new Weapons("Amalgam's Sword", 175, 375, false);
+        public static Weapons gemSword = new Weapons("The Gem Dragon's Bane", 500, 1000, false);
+
         public static Weapons godSword = new Weapons("God's Wrath", 10000, 5000, false);
 
 
-        public static Armor bronzeArmor = new Armor("Bronze Armor", 5, 15, false);
-        public static Armor ironArmor = new Armor("Iron Armor", 10, 30, false);
-        public static Armor platinumArmor = new Armor("Platinum Armor", 20, 60, false);
-        public static Armor titaniumArmor = new Armor("Titanium Armor", 40, 100, false);
-        public static Armor amalgamArmor = new Armor("Amalgam's Armor", 100, 400, false);
-        public static Armor gemArmor = new Armor("The Gem Dragon's Scales", 400, 1000, false);
+        public static Armor bronzeArmor = new Armor("Bronze Armor", 5, 75, false);
+        public static Armor ironArmor = new Armor("Iron Armor", 15, 150, false);
+        public static Armor silverArmor = new Armor("Silver Sword", 35, 250, false);
+        public static Armor platinumArmor = new Armor("Platinum Armor", 55, 350, false);
+        public static Armor titaniumArmor = new Armor("Titanium Armor", 100, 550, false);
+        public static Armor amalgamArmor = new Armor("Amalgam's Armor", 180, 1150, false);
+        public static Armor gemArmor = new Armor("The Gem Dragon's Scales", 400, 2000, false);
+
         public static Armor godArmor = new Armor("God's Protection", 10000, 50000, false);
 
         public static void ShopWeapons()
@@ -45,11 +49,11 @@ namespace Final_Project.Important_Stuff
                 $"\n'The Gem Dragon's Bane', it costs {gemSword.weaponCost} gold, and does {gemSword.weaponDamage} damage!" +
                 $"\n\nDo you wish to 'Leave' instead?");
 
-            option = Console.ReadLine();
+            option = Console.ReadLine().ToLower();
 
             switch (option)
             {
-                case "Bronze Sword":
+                case "bronze sword":
                     if (Program.adventurer.Gold < bronzeSword.weaponCost)
                     {
                         Console.Clear();
@@ -76,7 +80,7 @@ namespace Final_Project.Important_Stuff
                     }
                     break;
 
-                case "Iron Sword":
+                case "iron sword":
                     if (Program.adventurer.Gold < ironSword.weaponCost)
                     {
                         Console.Clear();
@@ -102,7 +106,7 @@ namespace Final_Project.Important_Stuff
                     }
                     break;
 
-                case "Platinum Sword":
+                case "platinum sword":
                     if (Program.adventurer.Gold < platinumSword.weaponCost)
                     {
                         Console.Clear();
@@ -128,7 +132,7 @@ namespace Final_Project.Important_Stuff
                     }
                     break;
 
-                case "Titanium Sword":
+                case "titanium sword":
                     if (Program.adventurer.Gold < titaniumSword.weaponCost)
                     {
                         Console.Clear();
@@ -154,7 +158,7 @@ namespace Final_Project.Important_Stuff
                     }
                     break;
 
-                case "Amalgam's Sword":
+                case "amalgam's sword":
                     if (Program.adventurer.Gold < amalgamSword.weaponCost)
                     {
                         Console.Clear();
@@ -180,7 +184,7 @@ namespace Final_Project.Important_Stuff
                     }
                     break;
 
-                case "The Gem Dragon's Bane":
+                case "the gem dragon's bane":
                     if (Program.adventurer.Gold < gemSword.weaponCost)
                     {
                         Console.Clear();
@@ -206,7 +210,7 @@ namespace Final_Project.Important_Stuff
                     }
                     break;
 
-                case "God's Wrath":
+                case "god's wrath":
                     {
                         Program.adventurer.currentWeaponDamage = godSword.weaponDamage;
                         Program.adventurer.currentWeaponName = godSword.weaponName;
@@ -214,7 +218,7 @@ namespace Final_Project.Important_Stuff
                     }
                     break;
 
-                case "Leave":
+                case "leave":
                     {
                         Console.Clear();
                         Console.WriteLine("You decided to leave!");
@@ -249,10 +253,10 @@ namespace Final_Project.Important_Stuff
                 $"\n'The Gem Dragon's Scales', it costs {gemArmor.armorCost} gold and protects you from {gemArmor.damageReduction} damage!" +
                 $"\n\nDo you wish to 'Leave' instead?");
 
-            option = Console.ReadLine();
+            option = Console.ReadLine().ToLower();
             switch (option)
             {
-                case "Bronze Armor":
+                case "bronze armor":
                     if (Program.adventurer.Gold < bronzeArmor.armorCost)
                     {
                         Console.Clear();
@@ -274,7 +278,7 @@ namespace Final_Project.Important_Stuff
                     }
                     break;
 
-                case "Iron Armor":
+                case "iron armor":
                     if (Program.adventurer.Gold < ironArmor.armorCost)
                     {
                         Console.Clear();
@@ -296,7 +300,7 @@ namespace Final_Project.Important_Stuff
                     }
                     break;
 
-                case "Platinum Armor":
+                case "platinum armor":
                     if (Program.adventurer.Gold < platinumArmor.armorCost)
                     {
                         Console.Clear();
@@ -318,7 +322,7 @@ namespace Final_Project.Important_Stuff
                     }
                     break;
 
-                case "Titanium Armor":
+                case "titanium armor":
                     if (Program.adventurer.Gold < titaniumArmor.armorCost)
                     {
                         Console.Clear();
@@ -340,7 +344,7 @@ namespace Final_Project.Important_Stuff
                     }
                     break;
 
-                case "Amalgam's Armor":
+                case "amalgam's armor":
                     if (Program.adventurer.Gold < amalgamArmor.armorCost)
                     {
                         Console.Clear();
@@ -362,7 +366,7 @@ namespace Final_Project.Important_Stuff
                     }
                     break;
 
-                case "The Gem Dragon's Scales":
+                case "the gem dragon's scales":
                     if (Program.adventurer.Gold < gemArmor.armorCost)
                     {
                         Console.Clear();
@@ -380,11 +384,10 @@ namespace Final_Project.Important_Stuff
                         Inventory.ArmorList.Insert(6, Program.adventurer.currentArmorName);
                         Inventory.ArmorProtection.Insert(6, Program.adventurer.currentArmorProtection);
                         gemArmor.isBoughtArmor = true;
-
                     }
                     break;
 
-                case "God's Protection":
+                case "god's protection":
                     {
                         Program.adventurer.currentArmorName = godArmor.armorName;
                         Program.adventurer.currentArmorProtection = godArmor.damageReduction;

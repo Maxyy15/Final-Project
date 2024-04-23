@@ -12,12 +12,12 @@ namespace Final_Project.Areas
 
         internal override string CreateDescription() =>
 @"You decided to go towards the forest!
-You see a sign warning you about the increase in monsters!
-Specifically Goblins, Wolves and Slimes!
+You see a sign warning you about the increase in monsters far above the usual.
+Specifically Goblins, Wolves and Slimes have been seen in abundance, but Ogre's have been spotted as well.
 
 You can 'Continue' to go deeper!
 You can 'Leave' and fight another day!
-Or you can 'Learn' what the weaknesses and resistences of the monsters you've encountered are!
+Or you can 'Learn' about the ememies you've fought so far!
 ";
 
         internal override void ReceiveChoice(string choice)

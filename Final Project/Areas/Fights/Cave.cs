@@ -12,11 +12,12 @@ namespace Final_Project.Areas
 
         internal override string CreateDescription() =>
 @"You decided to go towards the cave!
-The sounds of growls, the clacking of bones and the scuttling of bugs fill your ears as you approach!
+The sounds of growls, the clacking of bones and the scuttling of bugs fill your ears as you approach.
+You feel a deep evil aura emanating from within the cave.
 
 You can 'Continue' to go deeper!
 You can 'Leave' and fight another day!
-Or you can 'Learn' what the weaknesses and resistences of the monsters you've encountered are!
+Or you can 'Learn' about the ememies you've fought so far!
 ";
 
         internal override void ReceiveChoice(string choice)

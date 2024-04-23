@@ -33,12 +33,17 @@ namespace Final_Project.Important_Stuff
                     retry:
                         Magic fireBolt = new Magic("Fire Bolt", "Fire", 15, 5);
                         Magic lightningStrike = new Magic("Lightning Strike", "Fire", 5, 10);
+                        Magic fireStrom = new Magic("Fire Storm", "Fire", 30, 18);
 
                         Console.WriteLine($"'Fire Bolt', it does {fireBolt.magicDamage} damage and it costs {fireBolt.magicCost} Mana\n");
 
                         if (Program.adventurer.Level >= 5)
                         {
                             Console.WriteLine($"'Lightning Strike', it does {lightningStrike.magicDamage} damage and it costs {lightningStrike.magicCost} Mana\n");
+                        }
+                        if (Program.adventurer.Level >= 10)
+                        {
+                            Console.WriteLine($"'Fire Storm', it does {fireStrom.magicDamage} damage and it costs {fireStrom.magicCost} Mana\n");
                         }
 
                         string spellChoice = Console.ReadLine().ToLower();
@@ -110,7 +115,38 @@ namespace Final_Project.Important_Stuff
                                     }
                                 }
                                 break;
-
+                            case "fire storm":
+                                {
+                                    if (Program.adventurer.Level < 10)
+                                    {
+                                        Console.Clear();
+                                        Console.WriteLine("You aren't a high enough level to cast this.");
+                                        Program.cast = false;
+                                        break;
+                                        //goto whoops;
+                                    }
+                                    else
+                                    {
+                                        Console.Clear();
+                                        if (Program.adventurer.Mana < fireStrom.magicCost)
+                                        {
+                                            Console.Clear();
+                                            Console.WriteLine("You don't have enough Mana to cast this spell!");
+                                            break;
+                                        }
+                                        else
+                                        {
+                                            Console.Clear();
+                                            Console.WriteLine("You decided to use Lightning Strike!");
+                                            Program.adventurer.currentMagicDamage = fireStrom.magicDamage;
+                                            Program.adventurer.currentMagicSpell = fireStrom.magicName;
+                                            Program.adventurer.currentMagicCost = fireStrom.magicCost;
+                                            Program.adventurer.currentMagicType = fireStrom.magicType;
+                                            Program.adventurer.Mana -= fireStrom.magicCost;
+                                        }
+                                    }
+                                }
+                                break;
                             case "nevermind":
                                 {
                                     Console.Clear();
@@ -213,9 +249,10 @@ namespace Final_Project.Important_Stuff
 
                 case "earth":
                     {
-                        string spellChoice = Console.ReadLine();
+                        string spellChoice = Console.ReadLine().ToLower();
                         switch (spellChoice)
                         {
+
                             case "nevermind":
                                 {
                                     Console.Clear();
@@ -229,9 +266,35 @@ namespace Final_Project.Important_Stuff
 
                 case "poison":
                     {
-                        string spellChoice = Console.ReadLine();
+                        Magic poisonStrike = new Magic("Poison Strike", "Poison", 4, 12);
+
+                        Console.WriteLine($"'Poison Strike', it does {poisonStrike.magicDamage} damage and it costs {poisonStrike.magicCost} Mana! It can also poison the target for 7 extra damage!\n");
+
+                        string spellChoice = Console.ReadLine().ToLower();
                         switch (spellChoice)
                         {
+                            case "poison strike":
+                                Console.Clear();
+                                Console.WriteLine("You decided to use Poison Strike!");
+                                Program.adventurer.currentMagicDamage = poisonStrike.magicDamage;
+                                Program.adventurer.currentMagicSpell = poisonStrike.magicName;
+                                Program.adventurer.currentMagicCost = poisonStrike.magicCost;
+                                Program.adventurer.currentMagicType = poisonStrike.magicType;
+                                Program.adventurer.Mana -= poisonStrike.magicCost;
+
+                                Random rnd = new Random();
+
+                                int poisonChance = rnd.Next(0, 11);
+                                poisonChance = 3;
+                                if (poisonChance >= 0 && poisonChance <= 4)
+                                {
+                                    Program.playerStatusCount = poisonStrike.magicDuration = 5;
+                                    Program.adventurer.currentMagicStatus = poisonStrike.magicStatus = "Poison";
+                                    Fighting.poisonDmg = 7;
+                                    Fighting.monster.playerStatusEffect = true;
+                                }
+
+                                break;
                             case "nevermind":
                                 {
                                     Console.Clear();
@@ -245,7 +308,7 @@ namespace Final_Project.Important_Stuff
 
                 case "holy":
                     {
-                        string spellChoice = Console.ReadLine();
+                        string spellChoice = Console.ReadLine().ToLower();
                         switch (spellChoice)
                         {
                             case "nevermind":

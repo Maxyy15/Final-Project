@@ -12,8 +12,8 @@ namespace Final_Project.Areas
     {
 
         internal override string CreateDescription() =>
-@"This is your home that you inherited from your late grandfather, an adventurer just like you!
-He left this to you so you could have a place to stay while you finish his quest to save the world from Tiamat's wrath!
+@"This is your home that you inherited from your late grandfather, he was an adventurer just like you!
+He left this to you so you could have a place to stay while you finish the quest he started to save the world from Tiamat's wrath!
 
 You can 'Rest' to regain your health and mana!
 Check your 'Inventory' and see how much of everything you have!

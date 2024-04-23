@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace Final_Project.Monsters
 {
-    internal class Troll : Monster
+    internal class Manticore : Monster
     {
-        public int maxMonsterHP;
-        public int healAmount;
-        public Troll(string name, int hp, int damage, int exp, int drop)
+        public Manticore (string name, int hp, int damage, int exp, int drop)
         {
             this.monsterName = name;
             this.monsterHP = hp;
@@ -18,6 +16,5 @@ namespace Final_Project.Monsters
             this.monsterExp = exp;
             this.monsterDrop = drop;
         }
-        
     }
 }

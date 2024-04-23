@@ -47,7 +47,7 @@ namespace Final_Project.Important_Stuff
                                     //Console.WriteLine("You have " + Player_Stuff.Inventory.monsterDropAmount[x] + " " + Player_Stuff.Inventory.monsterDropNames[x]);
                                     Inventory.monsterDropAmount[x] -= 1;
                                     Program.adventurer.Gold += Player_Stuff.Inventory.monsterDropCost[x];
-                                    Console.WriteLine(Program.adventurer.Gold);
+                                    //Console.WriteLine(Program.adventurer.Gold);
                                 }
                                 if (Player_Stuff.Inventory.monsterDropAmount[x] != 0)
                                 {

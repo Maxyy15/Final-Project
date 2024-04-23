@@ -12,6 +12,3 @@ C:\Users\Maxy\GitKraken\Final-Project\Final Project\obj\Debug\Final Project.cspr
 C:\Users\Maxy\GitKraken\Final-Project\Final Project\obj\Debug\Final Project.csproj.CoreCompileInputs.cache
 C:\Users\Maxy\GitKraken\Final-Project\Final Project\obj\Debug\Final Project.exe
 C:\Users\Maxy\GitKraken\Final-Project\Final Project\obj\Debug\Final Project.pdb
-C:\Users\Maxy\GitKraken\Final-Project\Final Project\bin\Debug\Colorful.Console.dll
-C:\Users\Maxy\GitKraken\Final-Project\Final Project\bin\Debug\Colorful.Console.pdb
-C:\Users\Maxy\GitKraken\Final-Project\Final Project\obj\Debug\Final Project.csproj.CopyComplete
