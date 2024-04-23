@@ -93,6 +93,8 @@ namespace Final_Project
             {
                 Console.WriteLine("You failed to save the world from Tiamat\nAs the light begins to leave your eyes, you could only wish that you were just a little stronger.\n" +
                     "Maybe in your next life you could save everyone.\n");
+                Console.WriteLine("File... deleted...");
+                File.Delete(Home.SaveFile);
             }
             else
             {

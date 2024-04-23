@@ -41,8 +41,6 @@ namespace Final_Project.Important_Stuff
                 Inventory.ArmorList = loadedData.ArmorList;
                 Inventory.ArmorProtection = loadedData.ArmorProtection;
 
-
-
                 
                 Learning.wolf = loadedData.wolf;
                 Learning.slime = loadedData.slime;
@@ -67,11 +65,9 @@ namespace Final_Project.Important_Stuff
             }
             else
             {
-                // Handle the case when loadedData is null
                 Console.WriteLine("Error: Save data is null.");
             }
 
-            // Close the file stream after deserialization
             CloseFileStream();
         }
     
@@ -79,27 +75,12 @@ namespace Final_Project.Important_Stuff
         {
             if (fileStream != null)
             {
-                fileStream.Close(); // Close the file stream if it's not null
-                fileStream.Dispose(); // Dispose of the file stream to release resources
+                fileStream.Close();
+                fileStream.Dispose(); 
             }
         }
         public static SaveData DeserializeData()
         {
-
-            //if (File.Exists(Home.SaveFile))
-            //{
-            //    BinaryFormatter bf = new BinaryFormatter();
-            //    using (FileStream fs = new FileStream(Home.SaveFile, FileMode.Open))
-            //    {
-            //        return (SaveData)bf.Deserialize(fs);
-            //    }
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Save file does not exist.");
-            //    return null;
-            //}
-
             Console.WriteLine("Attempting to deserialize data...");
             if (File.Exists(Home.SaveFile))
             {
@@ -120,3 +101,23 @@ namespace Final_Project.Important_Stuff
         }
     }
 }
+
+
+
+
+
+
+
+//if (File.Exists(Home.SaveFile))
+//{
+//    BinaryFormatter bf = new BinaryFormatter();
+//    using (FileStream fs = new FileStream(Home.SaveFile, FileMode.Open))
+//    {
+//        return (SaveData)bf.Deserialize(fs);
+//    }
+//}
+//else
+//{
+//    Console.WriteLine("Save file does not exist.");
+//    return null;
+//}
