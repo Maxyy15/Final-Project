@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Final_Project.Monsters.Forest;
+using Final_Project.Monsters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +11,7 @@ namespace Final_Project.Important_Stuff
     [Serializable]
     internal class SaveData
     {
-        public string name;
+        /*public string name;
 
         public int HP;
         public int Mana;
@@ -100,6 +102,103 @@ namespace Final_Project.Important_Stuff
             pirate = false;
             sahuagin = false;
             tiamat = false;
+        }*/
+        public string Name { get; set; }
+        public int MaxHP { get; set; }
+        public int MaxMana { get; set; }
+        public int Gold { get; set; }
+        public int Exp { get; set; }
+        public int LevelUpCost { get; set; }
+        public int Level { get; set; }
+        public string CurrentWeaponName { get; set; }
+        public int CurrentWeaponDamage { get; set; }
+        public string CurrentArmorName { get; set; }
+        public int CurrentArmorProtection { get; set; }
+
+        public bool goblin;
+        public bool wolf;
+        public bool slime;
+        public bool ogre;
+        public bool kobold;
+        public bool mimic;
+        public bool skeleton;
+        public bool spider;
+        public bool troll;
+        public bool gnoll;
+        public bool manticore;
+        public bool mummy;
+        public bool purpleworm;
+        public bool roc;
+        public bool harpy;
+        public bool hydra;
+        public bool kraken;
+        public bool merfolk;
+        public bool pirate;
+        public bool sahuagin;
+        public bool tiamat;
+
+        // Properties representing inventory data
+        public List<string> MonsterDropNames { get; set; }
+        public List<int> MonsterDropAmount { get; set; }
+        public List<int> MonsterDropCost { get; set; }
+        public List<string> WeaponsList { get; set; }
+        public List<int> WeaponDamage { get; set; }
+        public List<string> ArmorList { get; set; }
+        public List<int> ArmorProtection { get; set; }
+
+        // Properties representing learning state
+
+        // Constructor
+        public SaveData(string name, int maxHP, int maxMana, int gold, int exp, int levelUpCost, int level,
+                string currentWeaponName, int currentWeaponDamage, string currentArmorName,
+                int currentArmorProtection, List<string> monsterDropNames, List<int> monsterDropAmount,
+                List<int> monsterDropCost, List<string> weaponsList, List<int> weaponDamage,
+                List<string> armorList, List<int> armorProtection,
+                bool goblin, bool wolf, bool slime, bool ogre, bool kobold,
+                bool mimic, bool skeleton, bool spider, bool troll, bool gnoll,
+                bool manticore, bool mummy, bool purpleworm, bool roc, bool harpy,
+                bool hydra, bool kraken, bool merfolk, bool pirate, bool sahuagin, bool tiamat)
+        {
+            Name = name;
+            MaxHP = maxHP;
+            MaxMana = maxMana;
+            Gold = gold;
+            Exp = exp;
+            LevelUpCost = levelUpCost;
+            Level = level;
+            CurrentWeaponName = currentWeaponName;
+            CurrentWeaponDamage = currentWeaponDamage;
+            CurrentArmorName = currentArmorName;
+            CurrentArmorProtection = currentArmorProtection;
+            MonsterDropNames = monsterDropNames;
+            MonsterDropAmount = monsterDropAmount;
+            MonsterDropCost = monsterDropCost;
+            WeaponsList = weaponsList;
+            WeaponDamage = weaponDamage;
+            ArmorList = armorList;
+            ArmorProtection = armorProtection;
+
+            this.goblin = goblin;
+            this.wolf = wolf;
+            this.slime = slime;
+            this.ogre = ogre;
+            this.kobold = kobold;
+            this.mimic = mimic;
+            this.skeleton = skeleton;
+            this.spider = spider;
+            this.troll = troll;
+            this.gnoll = gnoll;
+            this.manticore = manticore;
+            this.mummy = mummy;
+            this.purpleworm = purpleworm;
+            this.roc = roc;
+            this.harpy = harpy;
+            this.hydra = hydra;
+            this.kraken = kraken;
+            this.merfolk = merfolk;
+            this.pirate = pirate;
+            this.sahuagin = sahuagin;
+            this.tiamat = tiamat;
         }
     }
 }
