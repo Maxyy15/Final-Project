@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
+using System.Runtime.Serialization.Formatters.Binary;
 
 
 namespace Final_Project
@@ -23,7 +24,24 @@ namespace Final_Project
 
         static void Main(string[] args)
         {
+            if(File.Exists(Home.SaveFile))
+            {
+                Console.WriteLine("Do you want to load your previous data?\n'Yes' or 'No'?\nKeep in mind if you say no, your save data will be deleted.");
+                string ans = Console.ReadLine().ToLower();
+                if(ans == "yes")
+                {
+                    LoadData.Load();
+                    goto start;
+                }
+                if(ans == "no") 
+                {
+                    File.Delete(Home.SaveFile);
+                    goto okiedokie;
+                }
+            }
 
+        okiedokie:
+            Console.Clear();
             Initializing.Initialize();
 
             Weapons woodenSword = new Weapons("Wooden Sword", 5, 0, true);
@@ -33,7 +51,6 @@ namespace Final_Project
             Inventory.ArmorList.Insert(0, uselessArmor.armorName);
             Inventory.ArmorProtection.Insert(0, uselessArmor.damageReduction);
 
-            var game = new Game();
             Console.WriteLine("Hello Adventurer!\nWelcome to the Text Based Adventure Game!\nPlease enter your name below!");
             adventurer.name = Console.ReadLine();
             Console.Clear();
@@ -46,8 +63,10 @@ namespace Final_Project
             adventurer.currentWeaponDamage = woodenSword.weaponDamage;
             adventurer.currentWeaponName = woodenSword.weaponName;
             Console.ReadKey();
-            Console.Clear();
+        start:
 
+            var game = new Game();
+            Console.Clear();
             game.Add(new Home());
             game.Add(new Menu());
             game.Add(new Shop());

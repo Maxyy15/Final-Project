@@ -197,7 +197,7 @@ namespace Final_Project.Important_Stuff
                                     troll.monsterDropName = "Bottle of Troll Blood";
 
                                     troll.doesHeal = true;
-                                    troll.healAmount = 5;
+                                    troll.healAmount = 10;
                                     troll.maxMonsterHP = troll.monsterHP;
 
                                     resistanceArr[0] = "Air";
