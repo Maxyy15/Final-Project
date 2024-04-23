@@ -19,8 +19,7 @@ namespace Final_Project
         public static Player adventurer = new Player();
         public static int levelUpCost = 30, maxHP = 100, maxMana = 50, playerStatusCount, monstersStatusCount;
         public static string currentArea;
-        public static bool cast = false;
-        public static bool die = false;
+        public static bool cast = false, die = false, tiamatdead = false;
 
         static void Main(string[] args)
         {
@@ -95,13 +94,18 @@ namespace Final_Project
                     "Maybe in your next life you could save everyone.\n");
                 Console.WriteLine("File... deleted...");
                 File.Delete(Home.SaveFile);
+                Console.WriteLine("END");
             }
-            else
+            else if (tiamatdead == true)
             {
                 Console.WriteLine("You saved the world from Tiamat!\nTheir evil shall no longer corrupt the inhabitants of this world!\nAlthough many may not know what you" +
                     " have gone through to get the this point, that doesn't matter\nYou won.");
+                Console.WriteLine("END");
             }
-            Console.WriteLine("END");
+            else 
+            {
+                Console.WriteLine("Come back soon!");
+            }
             Console.ReadLine();
         }
     }

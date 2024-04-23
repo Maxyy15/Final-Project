@@ -11,10 +11,11 @@ namespace Final_Project.Player_Stuff
         public string magicName;
         public string magicType;
         public string magicStatus;
+
         public int magicDamage;
         public int magicCost;
         public int magicDuration = 0;
-        public int hitChance;
+        public int hitChance = 0;
 
         public Magic(string magicName, string magicType, int magicDamage, int magicCost)
         {

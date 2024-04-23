@@ -100,10 +100,9 @@ Or can 'Sleep' and save your progress!
                     break;
 
                 case "sleep":
-
-                    //var bf = new BinaryFormatter();
                     SaveData saveData = CreateSaveData();
                     SerializeData(saveData);
+                    Game.Finish();
                     break;
 
                 default:

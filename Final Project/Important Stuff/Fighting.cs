@@ -630,6 +630,7 @@ namespace Final_Project.Important_Stuff
                                     else if (monster.monsterName == "Tiamat")
                                     {
                                         Console.WriteLine("You have slain Tiamat, the God of the Evil Dragons!\nYou have saved the world from eternal darkness!");
+                                        Program.tiamatdead = true;
                                         Game.Finish();
                                     }
                                     else

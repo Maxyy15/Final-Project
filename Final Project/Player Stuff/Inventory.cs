@@ -63,19 +63,19 @@ namespace Final_Project.Player_Stuff
                     }
                     Console.WriteLine("Please select your armor!");
 
-                    choice = Console.ReadLine();
+                    choice1 = Console.ReadLine();
 
-                    if (choice == "")
+                    if (choice1 == "")
                     {
                         Console.Clear();
                         Console.WriteLine("Please select a valid armor!");
                         goto tryagain1;
                     }
-                    else if (ArmorList.Any(armor => armor == choice))
+                    else if (ArmorList.Any(armor => choice1 == armor))
                     {
-                        Program.adventurer.currentArmorName = choice;
+                        Program.adventurer.currentArmorName = choice1;
 
-                        int i = ArmorList.IndexOf(choice);
+                        int i = ArmorList.IndexOf(choice1);
 
                         Program.adventurer.currentArmorProtection = ArmorProtection[i];
                     }
@@ -116,11 +116,11 @@ namespace Final_Project.Player_Stuff
                         Console.WriteLine("Please select a valid weapon!");
                         goto tryagain2;
                     }
-                    else if(WeaponsList.Any(weapon => choice == weapon))
+                    else if(WeaponsList.Any(weapon => choice1 == weapon))
                     {
-                        Program.adventurer.currentWeaponName = choice;
+                        Program.adventurer.currentWeaponName = choice1;
 
-                        int i = WeaponsList.IndexOf(choice);
+                        int i = WeaponsList.IndexOf(choice1);
 
                         Program.adventurer.currentWeaponDamage = WeaponDamage[i];
                     }

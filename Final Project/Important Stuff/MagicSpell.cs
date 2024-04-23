@@ -34,8 +34,8 @@ namespace Final_Project.Important_Stuff
                         Magic orbOfElectricity = new Magic("Orb of Electricity", "Fire", 45, 40);//15
                         Magic runicBlaze = new Magic("Runic Blaze", "Fire", 75, 45); //20
                         Magic hellfireBlitz = new Magic("Hellfire Blitz", "Fire", 120, 70); //25
-                        Magic solarSpike = new Magic("Solar Spike", "Fire", 200, 100); //30
-                        Magic electricShower = new Magic("Electric Shower", "Fire", 150, 125); //35
+                        Magic electricShower = new Magic("Electric Shower", "Fire", 150, 125); //30
+                        Magic solarSpike = new Magic("Solar Spike", "Fire", 200, 100); //35
 
                         Console.WriteLine($"'Fire Bolt', it does {fireBolt.magicDamage} damage\nIt costs {fireBolt.magicCost} Mana\nIt has a 10% chance to fail!\n");
 
@@ -43,29 +43,35 @@ namespace Final_Project.Important_Stuff
                         {
                             Console.WriteLine($"'Lightning Strike', it does {lightningStrike.magicDamage} damage\nIt costs {lightningStrike.magicCost} Mana\nIt had a 20% chance to fail\n");
                         }
+
                         if (Program.adventurer.Level >= 10)
                         {
                             Console.WriteLine($"'Fire Storm', it does {fireStrom.magicDamage} damage\nIt costs {fireStrom.magicCost} Mana\nIt has a 25% chance to fail");
                         }
+
                         if (Program.adventurer.Level >= 15)
                         {
-
+                            Console.WriteLine($"'Orb of Electricity', it does {orbOfElectricity.magicDamage} damage\nIt costs {orbOfElectricity.magicCost} Mana\nIt has a 25% chance to fail");
                         }
+
                         if (Program.adventurer.Level >= 20)
                         {
-
+                            Console.WriteLine($"'Runic Blaze', it does {runicBlaze.magicDamage} damage\nIt costs {runicBlaze.magicCost} Mana\nIt has a 25% chance to fail");
                         }
+
                         if (Program.adventurer.Level >= 25)
                         {
-
+                            Console.WriteLine($"'Hellfire Blitz', it does {hellfireBlitz.magicDamage} damage\nIt costs {hellfireBlitz.magicCost} Mana\nIt has a 25% chance to fail");
                         }
+
                         if (Program.adventurer.Level >= 30)
                         {
-
+                            Console.WriteLine($"'Electric Shower', it does {electricShower.magicDamage} damage\nIt costs {electricShower.magicCost} Mana\nIt has a 25% chance to fail");
                         }
+
                         if (Program.adventurer.Level >= 35)
                         {
-
+                            Console.WriteLine($"'Solar Spike', it does {solarSpike.magicDamage} damage\nIt costs {solarSpike.magicCost} Mana\nIt has a 25% chance to fail");
                         }
 
                         string spellChoice = Console.ReadLine().ToLower();
@@ -380,31 +386,37 @@ namespace Final_Project.Important_Stuff
 
                         if (Program.adventurer.Level >= 5)
                         {
-
+                            Console.WriteLine($"'Aqua Whip', it does {aquaWhip.magicDamage} damage\nIt costs {aquaWhip.magicCost} Mana\n");
                         }
+
                         if (Program.adventurer.Level >= 10)
                         {
-
+                            Console.WriteLine($"'Frostbite Torrent', it does {frostbiteTorrent.magicDamage} damage\nIt costs {frostbiteTorrent.magicCost} Mana\n");
                         }
+
                         if (Program.adventurer.Level >= 15)
                         {
-
+                            Console.WriteLine($"'Abyssal Whirl', it does {abyssalWhirl.magicDamage} damage\nIt costs {abyssalWhirl.magicCost} Mana\n");
                         }
+
                         if (Program.adventurer.Level >= 20)
                         {
-
+                            Console.WriteLine($"'Siren's Seranade', it does {sirensSerenade.magicDamage} damage\nIt costs {sirensSerenade.magicCost} Mana\n");
                         }
+
                         if (Program.adventurer.Level >= 25)
                         {
-
+                            Console.WriteLine($"'Glacier Grasp', it does {glacierGrasp.magicDamage} damage\nIt costs {glacierGrasp.magicCost} Mana\n");
                         }
+
                         if (Program.adventurer.Level >= 30)
                         {
-
+                            Console.WriteLine($"'Wave of Freezing', it does {waveOfFreezing.magicDamage} damage\nIt costs {waveOfFreezing.magicCost} Mana\n");
                         }
+
                         if (Program.adventurer.Level >= 35)
                         {
-
+                            Console.WriteLine($"'Neptune's Fury', it does {neptunesFury.magicDamage} damage\nIt costs {neptunesFury.magicCost} Mana\n");
                         }
 
                         string spellChoice = Console.ReadLine().ToLower();
@@ -689,31 +701,31 @@ namespace Final_Project.Important_Stuff
 
                         if (Program.adventurer.Level >= 5)
                         {
-
+                            Console.WriteLine($"'Gust Guillotine', it does {gustGuillotine.magicDamage} damage\nIt costs {gustGuillotine.magicCost} Mana\n");
                         }
                         if (Program.adventurer.Level >= 10)
                         {
-
+                            Console.WriteLine($"'Aeroblade Slash', it does {aerobladeSlash.magicDamage} damage\nIt costs {aerobladeSlash.magicCost} Mana\n");
                         }
                         if (Program.adventurer.Level >= 15)
                         {
-
+                            Console.WriteLine($"'Whirlwind Whiplash', it does {whirlwindWhiplash.magicDamage} damage\nIt costs {whirlwindWhiplash.magicCost} Mana\n");
                         }
                         if (Program.adventurer.Level >= 20)
                         {
-
+                            Console.WriteLine($"'Typhoon Thrust', it does {typhoonThrust.magicDamage} damage\nIt costs {typhoonThrust.magicCost} Mana\n");
                         }
                         if (Program.adventurer.Level >= 25)
                         {
-
+                            Console.WriteLine($"'Cyclone Surge', it does {cycloneSurge.magicDamage} damage\nIt costs {cycloneSurge.magicCost} Mana\n");
                         }
                         if (Program.adventurer.Level >= 30)
                         {
-
+                            Console.WriteLine($"'Tempest Tornado', it does {tempestTornado.magicDamage} damage\nIt costs {tempestTornado.magicCost} Mana\n");
                         }
                         if (Program.adventurer.Level >= 35)
                         {
-
+                            Console.WriteLine($"'Zephyr's Wrath', it does {zephyrsWrath.magicDamage} damage\nIt costs {zephyrsWrath.magicCost} Mana\n");
                         }
 
                         string spellChoice = Console.ReadLine().ToLower();
@@ -993,33 +1005,41 @@ namespace Final_Project.Important_Stuff
                         Magic tectonicTremor= new Magic("Tectonic Tremor", "Earth", 46, 82); //30
                         Magic gaiasWrath= new Magic("Gaia's Wrath", "Earth", 145, 110); //35
 
+                        Console.WriteLine($"'Rock Smash', it does {rockSmash.magicDamage} damage\nIt costs {rockSmash.magicCost} Mana\n");
+
                         if (Program.adventurer.Level >= 5)
                         {
-
+                            Console.WriteLine($"'Dust Cloud', it does {dustCloud.magicDamage} damage\nIt costs {dustCloud.magicCost} Mana\n");
                         }
+
                         if (Program.adventurer.Level >= 10)
                         {
-
+                            Console.WriteLine($"'Terra Burst', it does {terraBurst.magicDamage} damage\nIt costs {terraBurst.magicCost} Mana\n");
                         }
+
                         if (Program.adventurer.Level >= 15)
                         {
-
+                            Console.WriteLine($"'Seismic Shockwave', it does {seismicShockwave.magicDamage} damage\nIt costs {seismicShockwave.magicCost} Mana\n");
                         }
+
                         if (Program.adventurer.Level >= 20)
                         {
-
+                            Console.WriteLine($"'Boulder Barrage', it does {boulderBarrage.magicDamage} damage\nIt costs {boulderBarrage.magicCost} Mana\n");
                         }
+
                         if (Program.adventurer.Level >= 25)
                         {
-
+                            Console.WriteLine($"'Mountain Maelstrom', it does {mountainMaelstrom.magicDamage} damage\nIt costs {mountainMaelstrom.magicCost} Mana\n");
                         }
+
                         if (Program.adventurer.Level >= 30)
                         {
-
+                            Console.WriteLine($"'Tectonic Tremor', it does {tectonicTremor.magicDamage} damage\nIt costs {tectonicTremor.magicCost} Mana\n");
                         }
+
                         if (Program.adventurer.Level >= 35)
                         {
-
+                            Console.WriteLine($"'Gaia's Wrath', it does {gaiasWrath.magicDamage} damage\nIt costs {gaiasWrath.magicCost} Mana\n");
                         }
 
                         string spellChoice = Console.ReadLine().ToLower();
@@ -1303,31 +1323,37 @@ namespace Final_Project.Important_Stuff
 
                         if (Program.adventurer.Level >= 5)
                         {
-
+                            Console.WriteLine($"'Noxious Rage', it does {noxiousRage.magicDamage} damage\nIt costs {noxiousRage.magicCost} Mana\n");
                         }
+
                         if (Program.adventurer.Level >= 10)
                         {
-
+                            Console.WriteLine($"'Miasma Mist', it does {miasmaMist.magicDamage} damage\nIt costs {miasmaMist.magicCost} Mana\n");
                         }
+
                         if (Program.adventurer.Level >= 15)
                         {
-
+                            Console.WriteLine($"'Gift of Decay', it does {giftOfDecay.magicDamage} damage\nIt costs {giftOfDecay.magicCost} Mana\n");
                         }
+
                         if (Program.adventurer.Level >= 20)
                         {
-
+                            Console.WriteLine($"'Toxic Vortex', it does {toxicVortex.magicDamage} damage\nIt costs {toxicVortex.magicCost} Mana\n");
                         }
+
                         if (Program.adventurer.Level >= 25)
                         {
-
+                            Console.WriteLine($"'Blast of Blight', it does {blastOfBlight.magicDamage} damage\nIt costs {blastOfBlight.magicCost} Mana\n");
                         }
+
                         if (Program.adventurer.Level >= 30)
                         {
-
+                            Console.WriteLine($"'Corrosive Flux', it does {corrosiveFlux.magicDamage} damage\nIt costs {corrosiveFlux.magicCost} Mana\n");
                         }
+
                         if (Program.adventurer.Level >= 35)
                         {
-
+                            Console.WriteLine($"'Plague Breath', it does {plagueBreath.magicDamage} damage\nIt costs {plagueBreath.magicCost} Mana\n");
                         }
 
                         string spellChoice = Console.ReadLine().ToLower();
@@ -1605,33 +1631,41 @@ namespace Final_Project.Important_Stuff
                         Magic celestialStrike= new Magic("Celestial Strike", "Holy", 183, 142);//30 
                         Magic divineIntervention= new Magic("Divine Intervention", "Holy", 500, 250);//35
 
+                        Console.WriteLine($"'Life Bomb', it does {lifeBomb.magicDamage} damage\nIt costs {lifeBomb.magicCost} Mana\n");
+
                         if (Program.adventurer.Level >= 5)
                         {
-
+                            Console.WriteLine($"'Burst of Recovery', it does {burstOfRecovery.magicDamage} damage\nIt costs {burstOfRecovery.magicCost} Mana\n");
                         }
+
                         if (Program.adventurer.Level >= 10)
                         {
-
+                            Console.WriteLine($"'Virtue of Life', it does {virtueOfLife.magicDamage} damage\nIt costs {virtueOfLife.magicCost} Mana\n");
                         }
+
                         if (Program.adventurer.Level >= 15)
                         {
-
+                            Console.WriteLine($"'Purifying Smite', it does {purifyingSmite.magicDamage} damage\nIt costs {purifyingSmite.magicCost} Mana\n");
                         }
+
                         if (Program.adventurer.Level >= 20)
                         {
-
+                            Console.WriteLine($"'Wrath of Radiance', it does {wrathOfRadiance.magicDamage} damage\nIt costs {wrathOfRadiance.magicCost} Mana\n");
                         }
+
                         if (Program.adventurer.Level >= 25)
                         {
-
+                            Console.WriteLine($"'Heavenly Surge', it does {heavenlySurge.magicDamage} damage\nIt costs {heavenlySurge.magicCost} Mana\n");
                         }
+
                         if (Program.adventurer.Level >= 30)
                         {
-
+                            Console.WriteLine($"'Celestial Strike', it does {celestialStrike.magicDamage} damage\nIt costs {celestialStrike.magicCost} Mana\n");
                         }
+
                         if (Program.adventurer.Level >= 35)
                         {
-
+                            Console.WriteLine($"'Divine Intervention', it does {divineIntervention.magicDamage} damage\nIt costs {divineIntervention.magicCost} Mana\n");
                         }
                         string spellChoice = Console.ReadLine().ToLower();
                         switch (spellChoice)
@@ -1908,33 +1942,41 @@ namespace Final_Project.Important_Stuff
                         Magic purge = new Magic("Purge", "Dark", 223, 164); //30 
                         Magic blackHole = new Magic("Black Hole", "Dark", 500, 400);//35
 
+                        Console.WriteLine($"'Necrotic Wave', it does {necroticWave.magicDamage} damage\nIt costs {necroticWave.magicCost} Mana\n");
+
                         if (Program.adventurer.Level >= 5)
                         {
-
+                            Console.WriteLine($"'Tainted Aura', it does {taintedAura.magicDamage} damage\nIt costs {taintedAura.magicCost} Mana\n");
                         }
+
                         if (Program.adventurer.Level >= 10)
                         {
-
+                            Console.WriteLine($"'Void Rain', it does {voidRain.magicDamage} damage\nIt costs {voidRain.magicCost} Mana\n");
                         }
+
                         if (Program.adventurer.Level >= 15)
                         {
-
+                            Console.WriteLine($"'Shadow Salvo', it does {shadowSalvo.magicDamage} damage\nIt costs {shadowSalvo.magicCost} Mana\n");
                         }
+
                         if (Program.adventurer.Level >= 20)
                         {
-
+                            Console.WriteLine($"'Soul Siphon', it does {soulSiphon.magicDamage} damage\nIt costs {soulSiphon.magicCost} Mana\n");
                         }
+
                         if (Program.adventurer.Level >= 25)
                         {
-
+                            Console.WriteLine($"'Obliteration Aura', it does {obliterationAura.magicDamage} damage\nIt costs {obliterationAura.magicCost} Mana\n");
                         }
+
                         if (Program.adventurer.Level >= 30)
                         {
-
+                            Console.WriteLine($"'Purge', it does {purge.magicDamage} damage\nIt costs {purge.magicCost} Mana\n");
                         }
+
                         if (Program.adventurer.Level >= 35)
                         {
-
+                            Console.WriteLine($"'Black Hole', it does {blackHole.magicDamage} damage\nIt costs {blackHole.magicCost} Mana\n");
                         }
                         string spellChoice = Console.ReadLine();
                         switch (spellChoice)
@@ -2207,7 +2249,6 @@ namespace Final_Project.Important_Stuff
                         Program.adventurer.Big = false;
                     }
                     break;
-
 
                 default:
                     {

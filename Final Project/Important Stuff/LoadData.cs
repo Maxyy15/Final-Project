@@ -26,13 +26,16 @@ namespace Final_Project.Important_Stuff
                 Program.adventurer.HP = loadedData.MaxHP;
                 Program.maxMana = loadedData.MaxMana;
                 Program.adventurer.Mana = loadedData.MaxMana;
+
                 Program.adventurer.Gold = loadedData.Gold;
                 Program.adventurer.Exp = loadedData.Exp;
                 Program.adventurer.Level = loadedData.Level;
+
                 Program.adventurer.currentWeaponName = loadedData.CurrentWeaponName;
                 Program.adventurer.currentWeaponDamage = loadedData.CurrentWeaponDamage;
                 Program.adventurer.currentArmorName = loadedData.CurrentArmorName;
                 Program.adventurer.currentArmorProtection = loadedData.CurrentArmorProtection;
+
                 Inventory.monsterDropNames = loadedData.MonsterDropNames;
                 Inventory.monsterDropAmount = loadedData.MonsterDropAmount;
                 Inventory.monsterDropCost = loadedData.MonsterDropCost;
